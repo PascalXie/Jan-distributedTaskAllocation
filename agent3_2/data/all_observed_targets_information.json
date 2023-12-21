@@ -1,0 +1,22 @@
+{
+    "target#1":
+    {
+        "location":
+        {
+            "x":10,
+            "y":20,
+            "z":30
+        },
+        "equipment_need":10
+    },
+    "target#2":
+    {
+        "location":
+        {
+            "x":50,
+            "y":20,
+            "z":80
+        },
+        "equipment_need":10
+    }
+}

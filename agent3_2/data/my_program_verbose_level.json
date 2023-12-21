@@ -1,0 +1,10 @@
+{
+    "does_debug":1,
+    "verbose_level":0,
+
+    "manual":
+    {
+        "does_debug":"0 stands for no debugging, 1 stands fo rdebugging.",
+        "verbose_level":"0 stands for printing nothing, 1 and other numbers lagger than 1 stand for printing information that is needed when debugging. The lager the number, the more information printed would be."
+    }
+}

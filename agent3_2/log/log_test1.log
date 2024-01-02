@@ -1,0 +1,2552 @@
+My agent start
+Current time is : Tue Jan  2 15:11:30 2024
+
+step 3.1 : get my agent's previous confidence, which was written in the file, file_name_my_agent_status_file
+{
+    "confidence_to_target#1": 0.8,
+    "confidence_to_target#2": 0.2
+}
+
+step 3.2 : ask agents in the neighbour set for their information
+
+step 3.2, step (2) : get information
+{
+    "my_agent_location": {
+        "x": 1,
+        "y": 2,
+        "z": 3
+    },
+    "my_agent_name": "Agent#3_3",
+    "my_confidences_to_all_targets": {
+        "confidence_to_target#1": 0.9,
+        "confidence_to_target#3": 0.4
+    },
+    "my_sampling_time_interval_unit_second": 0.1
+}
+
+step 3.2, step (2) : get information
+{
+    "my_agent_location": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+    },
+    "my_agent_name": "Agent#3",
+    "my_confidences_to_all_targets": {
+        "confidence_to_target#1": 0.1,
+        "confidence_to_target#2": 0.2
+    },
+    "my_sampling_time_interval_unit_second": 0.5
+}
+
+step 3.2, step (3) : get confidences and recored them into the variable "neighbour_agents_confidences_to_all_targets"
+{
+    "confidence_to_target#1": [
+        0.9,
+        0.1
+    ],
+    "confidence_to_target#2": [
+        0.2
+    ]
+}
+
+class CalculateConfidencesForConsensusStudying, DoCalculationAccordingToTarget, target_name: confidence_to_target#1
+my_previous_confidence : 0.8
+
+class CalculateConfidencesForConsensusStudying, DoCalculationAccordingToTarget, step 3 : get  confidence of the neighbour agents
+confidences_neighbour_agents : 0.9, 0.1, 
+
+class CalculateConfidencesForConsensusStudying, DoCalculationAccordingToTarget, step 4 : do calculate
+u : -0.6000000000000001
+
+class CalculateConfidencesForConsensusStudying, DoCalculationAccordingToTarget, step 6 : calculate the confidence
+my_confidence(0.19999999999999996) = my_previous_confidence(0.8) + u(-0.6000000000000001)
+class CalculateConfidencesForConsensusStudying, , step 1 : get target names, step 2 : store the confidence into the self.dict_my_agent_confidences
+confidence_to_target#1 : 0.19999999999999996
+DoCalculation Ends
+----
+------------
+
+
+class CalculateConfidencesForConsensusStudying, DoCalculationAccordingToTarget, target_name: confidence_to_target#2
+my_previous_confidence : 0.2
+
+class CalculateConfidencesForConsensusStudying, DoCalculationAccordingToTarget, step 3 : get  confidence of the neighbour agents
+confidences_neighbour_agents : 0.2, 
+
+class CalculateConfidencesForConsensusStudying, DoCalculationAccordingToTarget, step 4 : do calculate
+u : 0.0
+
+class CalculateConfidencesForConsensusStudying, DoCalculationAccordingToTarget, step 6 : calculate the confidence
+my_confidence(0.2) = my_previous_confidence(0.2) + u(0.0)
+class CalculateConfidencesForConsensusStudying, , step 1 : get target names, step 2 : store the confidence into the self.dict_my_agent_confidences
+confidence_to_target#2 : 0.2
+DoCalculation Ends
+----
+------------
+
+
+step 3.1 : get my agent's previous confidence, which was written in the file, file_name_my_agent_status_file
+{
+    "confidence_to_target#1": 0.19999999999999996,
+    "confidence_to_target#2": 0.2
+}
+
+step 3.2 : ask agents in the neighbour set for their information
+
+step 3.2, step (2) : get information
+{
+    "my_agent_location": {
+        "x": 1,
+        "y": 2,
+        "z": 3
+    },
+    "my_agent_name": "Agent#3_3",
+    "my_confidences_to_all_targets": {
+        "confidence_to_target#1": 0.9,
+        "confidence_to_target#3": 0.4
+    },
+    "my_sampling_time_interval_unit_second": 0.1
+}
+
+step 3.2, step (2) : get information
+{
+    "my_agent_location": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+    },
+    "my_agent_name": "Agent#3",
+    "my_confidences_to_all_targets": {
+        "confidence_to_target#1": 0.1,
+        "confidence_to_target#2": 0.2
+    },
+    "my_sampling_time_interval_unit_second": 0.5
+}
+
+step 3.2, step (3) : get confidences and recored them into the variable "neighbour_agents_confidences_to_all_targets"
+{
+    "confidence_to_target#1": [
+        0.9,
+        0.1
+    ],
+    "confidence_to_target#2": [
+        0.2
+    ]
+}
+
+class CalculateConfidencesForConsensusStudying, DoCalculationAccordingToTarget, target_name: confidence_to_target#1
+my_previous_confidence : 0.19999999999999996
+
+class CalculateConfidencesForConsensusStudying, DoCalculationAccordingToTarget, step 3 : get  confidence of the neighbour agents
+confidences_neighbour_agents : 0.9, 0.1, 
+
+class CalculateConfidencesForConsensusStudying, DoCalculationAccordingToTarget, step 4 : do calculate
+u : 0.6000000000000001
+
+class CalculateConfidencesForConsensusStudying, DoCalculationAccordingToTarget, step 6 : calculate the confidence
+my_confidence(0.8) = my_previous_confidence(0.19999999999999996) + u(0.6000000000000001)
+class CalculateConfidencesForConsensusStudying, , step 1 : get target names, step 2 : store the confidence into the self.dict_my_agent_confidences
+confidence_to_target#1 : 0.8
+DoCalculation Ends
+----
+------------
+
+
+class CalculateConfidencesForConsensusStudying, DoCalculationAccordingToTarget, target_name: confidence_to_target#2
+my_previous_confidence : 0.2
+
+class CalculateConfidencesForConsensusStudying, DoCalculationAccordingToTarget, step 3 : get  confidence of the neighbour agents
+confidences_neighbour_agents : 0.2, 
+
+class CalculateConfidencesForConsensusStudying, DoCalculationAccordingToTarget, step 4 : do calculate
+u : 0.0
+
+class CalculateConfidencesForConsensusStudying, DoCalculationAccordingToTarget, step 6 : calculate the confidence
+my_confidence(0.2) = my_previous_confidence(0.2) + u(0.0)
+class CalculateConfidencesForConsensusStudying, , step 1 : get target names, step 2 : store the confidence into the self.dict_my_agent_confidences
+confidence_to_target#2 : 0.2
+DoCalculation Ends
+----
+------------
+
+
+step 3.1 : get my agent's previous confidence, which was written in the file, file_name_my_agent_status_file
+{
+    "confidence_to_target#1": 0.8,
+    "confidence_to_target#2": 0.2
+}
+
+step 3.2 : ask agents in the neighbour set for their information
+
+step 3.2, step (2) : get information
+{
+    "my_agent_location": {
+        "x": 1,
+        "y": 2,
+        "z": 3
+    },
+    "my_agent_name": "Agent#3_3",
+    "my_confidences_to_all_targets": {
+        "confidence_to_target#1": 0.9,
+        "confidence_to_target#3": 0.4
+    },
+    "my_sampling_time_interval_unit_second": 0.1
+}
+
+step 3.2, step (2) : get information
+{
+    "my_agent_location": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+    },
+    "my_agent_name": "Agent#3",
+    "my_confidences_to_all_targets": {
+        "confidence_to_target#1": 0.1,
+        "confidence_to_target#2": 0.2
+    },
+    "my_sampling_time_interval_unit_second": 0.5
+}
+
+step 3.2, step (3) : get confidences and recored them into the variable "neighbour_agents_confidences_to_all_targets"
+{
+    "confidence_to_target#1": [
+        0.9,
+        0.1
+    ],
+    "confidence_to_target#2": [
+        0.2
+    ]
+}
+
+class CalculateConfidencesForConsensusStudying, DoCalculationAccordingToTarget, target_name: confidence_to_target#1
+my_previous_confidence : 0.8
+
+class CalculateConfidencesForConsensusStudying, DoCalculationAccordingToTarget, step 3 : get  confidence of the neighbour agents
+confidences_neighbour_agents : 0.9, 0.1, 
+
+class CalculateConfidencesForConsensusStudying, DoCalculationAccordingToTarget, step 4 : do calculate
+u : -0.6000000000000001
+
+class CalculateConfidencesForConsensusStudying, DoCalculationAccordingToTarget, step 6 : calculate the confidence
+my_confidence(0.19999999999999996) = my_previous_confidence(0.8) + u(-0.6000000000000001)
+class CalculateConfidencesForConsensusStudying, , step 1 : get target names, step 2 : store the confidence into the self.dict_my_agent_confidences
+confidence_to_target#1 : 0.19999999999999996
+DoCalculation Ends
+----
+------------
+
+
+class CalculateConfidencesForConsensusStudying, DoCalculationAccordingToTarget, target_name: confidence_to_target#2
+my_previous_confidence : 0.2
+
+class CalculateConfidencesForConsensusStudying, DoCalculationAccordingToTarget, step 3 : get  confidence of the neighbour agents
+confidences_neighbour_agents : 0.2, 
+
+class CalculateConfidencesForConsensusStudying, DoCalculationAccordingToTarget, step 4 : do calculate
+u : 0.0
+
+class CalculateConfidencesForConsensusStudying, DoCalculationAccordingToTarget, step 6 : calculate the confidence
+my_confidence(0.2) = my_previous_confidence(0.2) + u(0.0)
+class CalculateConfidencesForConsensusStudying, , step 1 : get target names, step 2 : store the confidence into the self.dict_my_agent_confidences
+confidence_to_target#2 : 0.2
+DoCalculation Ends
+----
+------------
+
+
+step 3.1 : get my agent's previous confidence, which was written in the file, file_name_my_agent_status_file
+{
+    "confidence_to_target#1": 0.19999999999999996,
+    "confidence_to_target#2": 0.2
+}
+
+step 3.2 : ask agents in the neighbour set for their information
+
+step 3.2, step (2) : get information
+{
+    "my_agent_location": {
+        "x": 1,
+        "y": 2,
+        "z": 3
+    },
+    "my_agent_name": "Agent#3_3",
+    "my_confidences_to_all_targets": {
+        "confidence_to_target#1": 0.9,
+        "confidence_to_target#3": 0.4
+    },
+    "my_sampling_time_interval_unit_second": 0.1
+}
+
+step 3.2, step (2) : get information
+{
+    "my_agent_location": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+    },
+    "my_agent_name": "Agent#3",
+    "my_confidences_to_all_targets": {
+        "confidence_to_target#1": 0.1,
+        "confidence_to_target#2": 0.2
+    },
+    "my_sampling_time_interval_unit_second": 0.5
+}
+
+step 3.2, step (3) : get confidences and recored them into the variable "neighbour_agents_confidences_to_all_targets"
+{
+    "confidence_to_target#1": [
+        0.9,
+        0.1
+    ],
+    "confidence_to_target#2": [
+        0.2
+    ]
+}
+
+class CalculateConfidencesForConsensusStudying, DoCalculationAccordingToTarget, target_name: confidence_to_target#1
+my_previous_confidence : 0.19999999999999996
+
+class CalculateConfidencesForConsensusStudying, DoCalculationAccordingToTarget, step 3 : get  confidence of the neighbour agents
+confidences_neighbour_agents : 0.9, 0.1, 
+
+class CalculateConfidencesForConsensusStudying, DoCalculationAccordingToTarget, step 4 : do calculate
+u : 0.6000000000000001
+
+class CalculateConfidencesForConsensusStudying, DoCalculationAccordingToTarget, step 6 : calculate the confidence
+my_confidence(0.8) = my_previous_confidence(0.19999999999999996) + u(0.6000000000000001)
+class CalculateConfidencesForConsensusStudying, , step 1 : get target names, step 2 : store the confidence into the self.dict_my_agent_confidences
+confidence_to_target#1 : 0.8
+DoCalculation Ends
+----
+------------
+
+
+class CalculateConfidencesForConsensusStudying, DoCalculationAccordingToTarget, target_name: confidence_to_target#2
+my_previous_confidence : 0.2
+
+class CalculateConfidencesForConsensusStudying, DoCalculationAccordingToTarget, step 3 : get  confidence of the neighbour agents
+confidences_neighbour_agents : 0.2, 
+
+class CalculateConfidencesForConsensusStudying, DoCalculationAccordingToTarget, step 4 : do calculate
+u : 0.0
+
+class CalculateConfidencesForConsensusStudying, DoCalculationAccordingToTarget, step 6 : calculate the confidence
+my_confidence(0.2) = my_previous_confidence(0.2) + u(0.0)
+class CalculateConfidencesForConsensusStudying, , step 1 : get target names, step 2 : store the confidence into the self.dict_my_agent_confidences
+confidence_to_target#2 : 0.2
+DoCalculation Ends
+----
+------------
+
+
+step 3.1 : get my agent's previous confidence, which was written in the file, file_name_my_agent_status_file
+{
+    "confidence_to_target#1": 0.8,
+    "confidence_to_target#2": 0.2
+}
+
+step 3.2 : ask agents in the neighbour set for their information
+
+step 3.2, step (2) : get information
+{
+    "my_agent_location": {
+        "x": 1,
+        "y": 2,
+        "z": 3
+    },
+    "my_agent_name": "Agent#3_3",
+    "my_confidences_to_all_targets": {
+        "confidence_to_target#1": 0.9,
+        "confidence_to_target#3": 0.4
+    },
+    "my_sampling_time_interval_unit_second": 0.1
+}
+
+step 3.2, step (2) : get information
+{
+    "my_agent_location": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+    },
+    "my_agent_name": "Agent#3",
+    "my_confidences_to_all_targets": {
+        "confidence_to_target#1": 0.1,
+        "confidence_to_target#2": 0.2
+    },
+    "my_sampling_time_interval_unit_second": 0.5
+}
+
+step 3.2, step (3) : get confidences and recored them into the variable "neighbour_agents_confidences_to_all_targets"
+{
+    "confidence_to_target#1": [
+        0.9,
+        0.1
+    ],
+    "confidence_to_target#2": [
+        0.2
+    ]
+}
+
+class CalculateConfidencesForConsensusStudying, DoCalculationAccordingToTarget, target_name: confidence_to_target#1
+my_previous_confidence : 0.8
+
+class CalculateConfidencesForConsensusStudying, DoCalculationAccordingToTarget, step 3 : get  confidence of the neighbour agents
+confidences_neighbour_agents : 0.9, 0.1, 
+
+class CalculateConfidencesForConsensusStudying, DoCalculationAccordingToTarget, step 4 : do calculate
+u : -0.6000000000000001
+
+class CalculateConfidencesForConsensusStudying, DoCalculationAccordingToTarget, step 6 : calculate the confidence
+my_confidence(0.19999999999999996) = my_previous_confidence(0.8) + u(-0.6000000000000001)
+class CalculateConfidencesForConsensusStudying, , step 1 : get target names, step 2 : store the confidence into the self.dict_my_agent_confidences
+confidence_to_target#1 : 0.19999999999999996
+DoCalculation Ends
+----
+------------
+
+
+class CalculateConfidencesForConsensusStudying, DoCalculationAccordingToTarget, target_name: confidence_to_target#2
+my_previous_confidence : 0.2
+
+class CalculateConfidencesForConsensusStudying, DoCalculationAccordingToTarget, step 3 : get  confidence of the neighbour agents
+confidences_neighbour_agents : 0.2, 
+
+class CalculateConfidencesForConsensusStudying, DoCalculationAccordingToTarget, step 4 : do calculate
+u : 0.0
+
+class CalculateConfidencesForConsensusStudying, DoCalculationAccordingToTarget, step 6 : calculate the confidence
+my_confidence(0.2) = my_previous_confidence(0.2) + u(0.0)
+class CalculateConfidencesForConsensusStudying, , step 1 : get target names, step 2 : store the confidence into the self.dict_my_agent_confidences
+confidence_to_target#2 : 0.2
+DoCalculation Ends
+----
+------------
+
+
+step 3.1 : get my agent's previous confidence, which was written in the file, file_name_my_agent_status_file
+{
+    "confidence_to_target#1": 0.19999999999999996,
+    "confidence_to_target#2": 0.2
+}
+
+step 3.2 : ask agents in the neighbour set for their information
+
+step 3.2, step (2) : get information
+{
+    "my_agent_location": {
+        "x": 1,
+        "y": 2,
+        "z": 3
+    },
+    "my_agent_name": "Agent#3_3",
+    "my_confidences_to_all_targets": {
+        "confidence_to_target#1": 0.9,
+        "confidence_to_target#3": 0.4
+    },
+    "my_sampling_time_interval_unit_second": 0.1
+}
+
+step 3.2, step (2) : get information
+{
+    "my_agent_location": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+    },
+    "my_agent_name": "Agent#3",
+    "my_confidences_to_all_targets": {
+        "confidence_to_target#1": 0.1,
+        "confidence_to_target#2": 0.2
+    },
+    "my_sampling_time_interval_unit_second": 0.5
+}
+
+step 3.2, step (3) : get confidences and recored them into the variable "neighbour_agents_confidences_to_all_targets"
+{
+    "confidence_to_target#1": [
+        0.9,
+        0.1
+    ],
+    "confidence_to_target#2": [
+        0.2
+    ]
+}
+
+class CalculateConfidencesForConsensusStudying, DoCalculationAccordingToTarget, target_name: confidence_to_target#1
+my_previous_confidence : 0.19999999999999996
+
+class CalculateConfidencesForConsensusStudying, DoCalculationAccordingToTarget, step 3 : get  confidence of the neighbour agents
+confidences_neighbour_agents : 0.9, 0.1, 
+
+class CalculateConfidencesForConsensusStudying, DoCalculationAccordingToTarget, step 4 : do calculate
+u : 0.6000000000000001
+
+class CalculateConfidencesForConsensusStudying, DoCalculationAccordingToTarget, step 6 : calculate the confidence
+my_confidence(0.8) = my_previous_confidence(0.19999999999999996) + u(0.6000000000000001)
+class CalculateConfidencesForConsensusStudying, , step 1 : get target names, step 2 : store the confidence into the self.dict_my_agent_confidences
+confidence_to_target#1 : 0.8
+DoCalculation Ends
+----
+------------
+
+
+class CalculateConfidencesForConsensusStudying, DoCalculationAccordingToTarget, target_name: confidence_to_target#2
+my_previous_confidence : 0.2
+
+class CalculateConfidencesForConsensusStudying, DoCalculationAccordingToTarget, step 3 : get  confidence of the neighbour agents
+confidences_neighbour_agents : 0.2, 
+
+class CalculateConfidencesForConsensusStudying, DoCalculationAccordingToTarget, step 4 : do calculate
+u : 0.0
+
+class CalculateConfidencesForConsensusStudying, DoCalculationAccordingToTarget, step 6 : calculate the confidence
+my_confidence(0.2) = my_previous_confidence(0.2) + u(0.0)
+class CalculateConfidencesForConsensusStudying, , step 1 : get target names, step 2 : store the confidence into the self.dict_my_agent_confidences
+confidence_to_target#2 : 0.2
+DoCalculation Ends
+----
+------------
+
+
+step 3.1 : get my agent's previous confidence, which was written in the file, file_name_my_agent_status_file
+{
+    "confidence_to_target#1": 0.8,
+    "confidence_to_target#2": 0.2
+}
+
+step 3.2 : ask agents in the neighbour set for their information
+
+step 3.2, step (2) : get information
+{
+    "my_agent_location": {
+        "x": 1,
+        "y": 2,
+        "z": 3
+    },
+    "my_agent_name": "Agent#3_3",
+    "my_confidences_to_all_targets": {
+        "confidence_to_target#1": 0.9,
+        "confidence_to_target#3": 0.4
+    },
+    "my_sampling_time_interval_unit_second": 0.1
+}
+
+step 3.2, step (2) : get information
+{
+    "my_agent_location": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+    },
+    "my_agent_name": "Agent#3",
+    "my_confidences_to_all_targets": {
+        "confidence_to_target#1": 0.1,
+        "confidence_to_target#2": 0.2
+    },
+    "my_sampling_time_interval_unit_second": 0.5
+}
+
+step 3.2, step (3) : get confidences and recored them into the variable "neighbour_agents_confidences_to_all_targets"
+{
+    "confidence_to_target#1": [
+        0.9,
+        0.1
+    ],
+    "confidence_to_target#2": [
+        0.2
+    ]
+}
+
+class CalculateConfidencesForConsensusStudying, DoCalculationAccordingToTarget, target_name: confidence_to_target#1
+my_previous_confidence : 0.8
+
+class CalculateConfidencesForConsensusStudying, DoCalculationAccordingToTarget, step 3 : get  confidence of the neighbour agents
+confidences_neighbour_agents : 0.9, 0.1, 
+
+class CalculateConfidencesForConsensusStudying, DoCalculationAccordingToTarget, step 4 : do calculate
+u : -0.6000000000000001
+
+class CalculateConfidencesForConsensusStudying, DoCalculationAccordingToTarget, step 6 : calculate the confidence
+my_confidence(0.19999999999999996) = my_previous_confidence(0.8) + u(-0.6000000000000001)
+class CalculateConfidencesForConsensusStudying, , step 1 : get target names, step 2 : store the confidence into the self.dict_my_agent_confidences
+confidence_to_target#1 : 0.19999999999999996
+DoCalculation Ends
+----
+------------
+
+
+class CalculateConfidencesForConsensusStudying, DoCalculationAccordingToTarget, target_name: confidence_to_target#2
+my_previous_confidence : 0.2
+
+class CalculateConfidencesForConsensusStudying, DoCalculationAccordingToTarget, step 3 : get  confidence of the neighbour agents
+confidences_neighbour_agents : 0.2, 
+
+class CalculateConfidencesForConsensusStudying, DoCalculationAccordingToTarget, step 4 : do calculate
+u : 0.0
+
+class CalculateConfidencesForConsensusStudying, DoCalculationAccordingToTarget, step 6 : calculate the confidence
+my_confidence(0.2) = my_previous_confidence(0.2) + u(0.0)
+class CalculateConfidencesForConsensusStudying, , step 1 : get target names, step 2 : store the confidence into the self.dict_my_agent_confidences
+confidence_to_target#2 : 0.2
+DoCalculation Ends
+----
+------------
+
+
+step 3.1 : get my agent's previous confidence, which was written in the file, file_name_my_agent_status_file
+{
+    "confidence_to_target#1": 0.19999999999999996,
+    "confidence_to_target#2": 0.2
+}
+
+step 3.2 : ask agents in the neighbour set for their information
+
+step 3.2, step (2) : get information
+{
+    "my_agent_location": {
+        "x": 1,
+        "y": 2,
+        "z": 3
+    },
+    "my_agent_name": "Agent#3_3",
+    "my_confidences_to_all_targets": {
+        "confidence_to_target#1": 0.9,
+        "confidence_to_target#3": 0.4
+    },
+    "my_sampling_time_interval_unit_second": 0.1
+}
+
+step 3.2, step (2) : get information
+{
+    "my_agent_location": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+    },
+    "my_agent_name": "Agent#3",
+    "my_confidences_to_all_targets": {
+        "confidence_to_target#1": 0.1,
+        "confidence_to_target#2": 0.2
+    },
+    "my_sampling_time_interval_unit_second": 0.5
+}
+
+step 3.2, step (3) : get confidences and recored them into the variable "neighbour_agents_confidences_to_all_targets"
+{
+    "confidence_to_target#1": [
+        0.9,
+        0.1
+    ],
+    "confidence_to_target#2": [
+        0.2
+    ]
+}
+
+class CalculateConfidencesForConsensusStudying, DoCalculationAccordingToTarget, target_name: confidence_to_target#1
+my_previous_confidence : 0.19999999999999996
+
+class CalculateConfidencesForConsensusStudying, DoCalculationAccordingToTarget, step 3 : get  confidence of the neighbour agents
+confidences_neighbour_agents : 0.9, 0.1, 
+
+class CalculateConfidencesForConsensusStudying, DoCalculationAccordingToTarget, step 4 : do calculate
+u : 0.6000000000000001
+
+class CalculateConfidencesForConsensusStudying, DoCalculationAccordingToTarget, step 6 : calculate the confidence
+my_confidence(0.8) = my_previous_confidence(0.19999999999999996) + u(0.6000000000000001)
+class CalculateConfidencesForConsensusStudying, , step 1 : get target names, step 2 : store the confidence into the self.dict_my_agent_confidences
+confidence_to_target#1 : 0.8
+DoCalculation Ends
+----
+------------
+
+
+class CalculateConfidencesForConsensusStudying, DoCalculationAccordingToTarget, target_name: confidence_to_target#2
+my_previous_confidence : 0.2
+
+class CalculateConfidencesForConsensusStudying, DoCalculationAccordingToTarget, step 3 : get  confidence of the neighbour agents
+confidences_neighbour_agents : 0.2, 
+
+class CalculateConfidencesForConsensusStudying, DoCalculationAccordingToTarget, step 4 : do calculate
+u : 0.0
+
+class CalculateConfidencesForConsensusStudying, DoCalculationAccordingToTarget, step 6 : calculate the confidence
+my_confidence(0.2) = my_previous_confidence(0.2) + u(0.0)
+class CalculateConfidencesForConsensusStudying, , step 1 : get target names, step 2 : store the confidence into the self.dict_my_agent_confidences
+confidence_to_target#2 : 0.2
+DoCalculation Ends
+----
+------------
+
+
+step 3.1 : get my agent's previous confidence, which was written in the file, file_name_my_agent_status_file
+{
+    "confidence_to_target#1": 0.8,
+    "confidence_to_target#2": 0.2
+}
+
+step 3.2 : ask agents in the neighbour set for their information
+
+step 3.2, step (2) : get information
+{
+    "my_agent_location": {
+        "x": 1,
+        "y": 2,
+        "z": 3
+    },
+    "my_agent_name": "Agent#3_3",
+    "my_confidences_to_all_targets": {
+        "confidence_to_target#1": 0.9,
+        "confidence_to_target#3": 0.4
+    },
+    "my_sampling_time_interval_unit_second": 0.1
+}
+
+step 3.2, step (2) : get information
+{
+    "my_agent_location": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+    },
+    "my_agent_name": "Agent#3",
+    "my_confidences_to_all_targets": {
+        "confidence_to_target#1": 0.1,
+        "confidence_to_target#2": 0.2
+    },
+    "my_sampling_time_interval_unit_second": 0.5
+}
+
+step 3.2, step (3) : get confidences and recored them into the variable "neighbour_agents_confidences_to_all_targets"
+{
+    "confidence_to_target#1": [
+        0.9,
+        0.1
+    ],
+    "confidence_to_target#2": [
+        0.2
+    ]
+}
+
+class CalculateConfidencesForConsensusStudying, DoCalculationAccordingToTarget, target_name: confidence_to_target#1
+my_previous_confidence : 0.8
+
+class CalculateConfidencesForConsensusStudying, DoCalculationAccordingToTarget, step 3 : get  confidence of the neighbour agents
+confidences_neighbour_agents : 0.9, 0.1, 
+
+class CalculateConfidencesForConsensusStudying, DoCalculationAccordingToTarget, step 4 : do calculate
+u : -0.6000000000000001
+
+class CalculateConfidencesForConsensusStudying, DoCalculationAccordingToTarget, step 6 : calculate the confidence
+my_confidence(0.19999999999999996) = my_previous_confidence(0.8) + u(-0.6000000000000001)
+class CalculateConfidencesForConsensusStudying, , step 1 : get target names, step 2 : store the confidence into the self.dict_my_agent_confidences
+confidence_to_target#1 : 0.19999999999999996
+DoCalculation Ends
+----
+------------
+
+
+class CalculateConfidencesForConsensusStudying, DoCalculationAccordingToTarget, target_name: confidence_to_target#2
+my_previous_confidence : 0.2
+
+class CalculateConfidencesForConsensusStudying, DoCalculationAccordingToTarget, step 3 : get  confidence of the neighbour agents
+confidences_neighbour_agents : 0.2, 
+
+class CalculateConfidencesForConsensusStudying, DoCalculationAccordingToTarget, step 4 : do calculate
+u : 0.0
+
+class CalculateConfidencesForConsensusStudying, DoCalculationAccordingToTarget, step 6 : calculate the confidence
+my_confidence(0.2) = my_previous_confidence(0.2) + u(0.0)
+class CalculateConfidencesForConsensusStudying, , step 1 : get target names, step 2 : store the confidence into the self.dict_my_agent_confidences
+confidence_to_target#2 : 0.2
+DoCalculation Ends
+----
+------------
+
+
+step 3.1 : get my agent's previous confidence, which was written in the file, file_name_my_agent_status_file
+{
+    "confidence_to_target#1": 0.19999999999999996,
+    "confidence_to_target#2": 0.2
+}
+
+step 3.2 : ask agents in the neighbour set for their information
+
+step 3.2, step (2) : get information
+{
+    "my_agent_location": {
+        "x": 1,
+        "y": 2,
+        "z": 3
+    },
+    "my_agent_name": "Agent#3_3",
+    "my_confidences_to_all_targets": {
+        "confidence_to_target#1": 0.9,
+        "confidence_to_target#3": 0.4
+    },
+    "my_sampling_time_interval_unit_second": 0.1
+}
+
+step 3.2, step (2) : get information
+{
+    "my_agent_location": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+    },
+    "my_agent_name": "Agent#3",
+    "my_confidences_to_all_targets": {
+        "confidence_to_target#1": 0.1,
+        "confidence_to_target#2": 0.2
+    },
+    "my_sampling_time_interval_unit_second": 0.5
+}
+
+step 3.2, step (3) : get confidences and recored them into the variable "neighbour_agents_confidences_to_all_targets"
+{
+    "confidence_to_target#1": [
+        0.9,
+        0.1
+    ],
+    "confidence_to_target#2": [
+        0.2
+    ]
+}
+
+class CalculateConfidencesForConsensusStudying, DoCalculationAccordingToTarget, target_name: confidence_to_target#1
+my_previous_confidence : 0.19999999999999996
+
+class CalculateConfidencesForConsensusStudying, DoCalculationAccordingToTarget, step 3 : get  confidence of the neighbour agents
+confidences_neighbour_agents : 0.9, 0.1, 
+
+class CalculateConfidencesForConsensusStudying, DoCalculationAccordingToTarget, step 4 : do calculate
+u : 0.6000000000000001
+
+class CalculateConfidencesForConsensusStudying, DoCalculationAccordingToTarget, step 6 : calculate the confidence
+my_confidence(0.8) = my_previous_confidence(0.19999999999999996) + u(0.6000000000000001)
+class CalculateConfidencesForConsensusStudying, , step 1 : get target names, step 2 : store the confidence into the self.dict_my_agent_confidences
+confidence_to_target#1 : 0.8
+DoCalculation Ends
+----
+------------
+
+
+class CalculateConfidencesForConsensusStudying, DoCalculationAccordingToTarget, target_name: confidence_to_target#2
+my_previous_confidence : 0.2
+
+class CalculateConfidencesForConsensusStudying, DoCalculationAccordingToTarget, step 3 : get  confidence of the neighbour agents
+confidences_neighbour_agents : 0.2, 
+
+class CalculateConfidencesForConsensusStudying, DoCalculationAccordingToTarget, step 4 : do calculate
+u : 0.0
+
+class CalculateConfidencesForConsensusStudying, DoCalculationAccordingToTarget, step 6 : calculate the confidence
+my_confidence(0.2) = my_previous_confidence(0.2) + u(0.0)
+class CalculateConfidencesForConsensusStudying, , step 1 : get target names, step 2 : store the confidence into the self.dict_my_agent_confidences
+confidence_to_target#2 : 0.2
+DoCalculation Ends
+----
+------------
+
+
+step 3.1 : get my agent's previous confidence, which was written in the file, file_name_my_agent_status_file
+{
+    "confidence_to_target#1": 0.8,
+    "confidence_to_target#2": 0.2
+}
+
+step 3.2 : ask agents in the neighbour set for their information
+
+step 3.2, step (2) : get information
+{
+    "my_agent_location": {
+        "x": 1,
+        "y": 2,
+        "z": 3
+    },
+    "my_agent_name": "Agent#3_3",
+    "my_confidences_to_all_targets": {
+        "confidence_to_target#1": 0.9,
+        "confidence_to_target#3": 0.4
+    },
+    "my_sampling_time_interval_unit_second": 0.1
+}
+
+step 3.2, step (2) : get information
+{
+    "my_agent_location": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+    },
+    "my_agent_name": "Agent#3",
+    "my_confidences_to_all_targets": {
+        "confidence_to_target#1": 0.1,
+        "confidence_to_target#2": 0.2
+    },
+    "my_sampling_time_interval_unit_second": 0.5
+}
+
+step 3.2, step (3) : get confidences and recored them into the variable "neighbour_agents_confidences_to_all_targets"
+{
+    "confidence_to_target#1": [
+        0.9,
+        0.1
+    ],
+    "confidence_to_target#2": [
+        0.2
+    ]
+}
+
+class CalculateConfidencesForConsensusStudying, DoCalculationAccordingToTarget, target_name: confidence_to_target#1
+my_previous_confidence : 0.8
+
+class CalculateConfidencesForConsensusStudying, DoCalculationAccordingToTarget, step 3 : get  confidence of the neighbour agents
+confidences_neighbour_agents : 0.9, 0.1, 
+
+class CalculateConfidencesForConsensusStudying, DoCalculationAccordingToTarget, step 4 : do calculate
+u : -0.6000000000000001
+
+class CalculateConfidencesForConsensusStudying, DoCalculationAccordingToTarget, step 6 : calculate the confidence
+my_confidence(0.19999999999999996) = my_previous_confidence(0.8) + u(-0.6000000000000001)
+class CalculateConfidencesForConsensusStudying, , step 1 : get target names, step 2 : store the confidence into the self.dict_my_agent_confidences
+confidence_to_target#1 : 0.19999999999999996
+DoCalculation Ends
+----
+------------
+
+
+class CalculateConfidencesForConsensusStudying, DoCalculationAccordingToTarget, target_name: confidence_to_target#2
+my_previous_confidence : 0.2
+
+class CalculateConfidencesForConsensusStudying, DoCalculationAccordingToTarget, step 3 : get  confidence of the neighbour agents
+confidences_neighbour_agents : 0.2, 
+
+class CalculateConfidencesForConsensusStudying, DoCalculationAccordingToTarget, step 4 : do calculate
+u : 0.0
+
+class CalculateConfidencesForConsensusStudying, DoCalculationAccordingToTarget, step 6 : calculate the confidence
+my_confidence(0.2) = my_previous_confidence(0.2) + u(0.0)
+class CalculateConfidencesForConsensusStudying, , step 1 : get target names, step 2 : store the confidence into the self.dict_my_agent_confidences
+confidence_to_target#2 : 0.2
+DoCalculation Ends
+----
+------------
+
+
+step 3.1 : get my agent's previous confidence, which was written in the file, file_name_my_agent_status_file
+{
+    "confidence_to_target#1": 0.19999999999999996,
+    "confidence_to_target#2": 0.2
+}
+
+step 3.2 : ask agents in the neighbour set for their information
+
+step 3.2, step (2) : get information
+{
+    "my_agent_location": {
+        "x": 1,
+        "y": 2,
+        "z": 3
+    },
+    "my_agent_name": "Agent#3_3",
+    "my_confidences_to_all_targets": {
+        "confidence_to_target#1": 0.9,
+        "confidence_to_target#3": 0.4
+    },
+    "my_sampling_time_interval_unit_second": 0.1
+}
+
+step 3.2, step (2) : get information
+{
+    "my_agent_location": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+    },
+    "my_agent_name": "Agent#3",
+    "my_confidences_to_all_targets": {
+        "confidence_to_target#1": 0.1,
+        "confidence_to_target#2": 0.2
+    },
+    "my_sampling_time_interval_unit_second": 0.5
+}
+
+step 3.2, step (3) : get confidences and recored them into the variable "neighbour_agents_confidences_to_all_targets"
+{
+    "confidence_to_target#1": [
+        0.9,
+        0.1
+    ],
+    "confidence_to_target#2": [
+        0.2
+    ]
+}
+
+class CalculateConfidencesForConsensusStudying, DoCalculationAccordingToTarget, target_name: confidence_to_target#1
+my_previous_confidence : 0.19999999999999996
+
+class CalculateConfidencesForConsensusStudying, DoCalculationAccordingToTarget, step 3 : get  confidence of the neighbour agents
+confidences_neighbour_agents : 0.9, 0.1, 
+
+class CalculateConfidencesForConsensusStudying, DoCalculationAccordingToTarget, step 4 : do calculate
+u : 0.6000000000000001
+
+class CalculateConfidencesForConsensusStudying, DoCalculationAccordingToTarget, step 6 : calculate the confidence
+my_confidence(0.8) = my_previous_confidence(0.19999999999999996) + u(0.6000000000000001)
+class CalculateConfidencesForConsensusStudying, , step 1 : get target names, step 2 : store the confidence into the self.dict_my_agent_confidences
+confidence_to_target#1 : 0.8
+DoCalculation Ends
+----
+------------
+
+
+class CalculateConfidencesForConsensusStudying, DoCalculationAccordingToTarget, target_name: confidence_to_target#2
+my_previous_confidence : 0.2
+
+class CalculateConfidencesForConsensusStudying, DoCalculationAccordingToTarget, step 3 : get  confidence of the neighbour agents
+confidences_neighbour_agents : 0.2, 
+
+class CalculateConfidencesForConsensusStudying, DoCalculationAccordingToTarget, step 4 : do calculate
+u : 0.0
+
+class CalculateConfidencesForConsensusStudying, DoCalculationAccordingToTarget, step 6 : calculate the confidence
+my_confidence(0.2) = my_previous_confidence(0.2) + u(0.0)
+class CalculateConfidencesForConsensusStudying, , step 1 : get target names, step 2 : store the confidence into the self.dict_my_agent_confidences
+confidence_to_target#2 : 0.2
+DoCalculation Ends
+----
+------------
+
+
+step 3.1 : get my agent's previous confidence, which was written in the file, file_name_my_agent_status_file
+{
+    "confidence_to_target#1": 0.8,
+    "confidence_to_target#2": 0.2
+}
+
+step 3.2 : ask agents in the neighbour set for their information
+
+step 3.2, step (2) : get information
+{
+    "my_agent_location": {
+        "x": 1,
+        "y": 2,
+        "z": 3
+    },
+    "my_agent_name": "Agent#3_3",
+    "my_confidences_to_all_targets": {
+        "confidence_to_target#1": 0.9,
+        "confidence_to_target#3": 0.4
+    },
+    "my_sampling_time_interval_unit_second": 0.1
+}
+
+step 3.2, step (2) : get information
+{
+    "my_agent_location": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+    },
+    "my_agent_name": "Agent#3",
+    "my_confidences_to_all_targets": {
+        "confidence_to_target#1": 0.1,
+        "confidence_to_target#2": 0.2
+    },
+    "my_sampling_time_interval_unit_second": 0.5
+}
+
+step 3.2, step (3) : get confidences and recored them into the variable "neighbour_agents_confidences_to_all_targets"
+{
+    "confidence_to_target#1": [
+        0.9,
+        0.1
+    ],
+    "confidence_to_target#2": [
+        0.2
+    ]
+}
+
+class CalculateConfidencesForConsensusStudying, DoCalculationAccordingToTarget, target_name: confidence_to_target#1
+my_previous_confidence : 0.8
+
+class CalculateConfidencesForConsensusStudying, DoCalculationAccordingToTarget, step 3 : get  confidence of the neighbour agents
+confidences_neighbour_agents : 0.9, 0.1, 
+
+class CalculateConfidencesForConsensusStudying, DoCalculationAccordingToTarget, step 4 : do calculate
+u : -0.6000000000000001
+
+class CalculateConfidencesForConsensusStudying, DoCalculationAccordingToTarget, step 6 : calculate the confidence
+my_confidence(0.19999999999999996) = my_previous_confidence(0.8) + u(-0.6000000000000001)
+class CalculateConfidencesForConsensusStudying, , step 1 : get target names, step 2 : store the confidence into the self.dict_my_agent_confidences
+confidence_to_target#1 : 0.19999999999999996
+DoCalculation Ends
+----
+------------
+
+
+class CalculateConfidencesForConsensusStudying, DoCalculationAccordingToTarget, target_name: confidence_to_target#2
+my_previous_confidence : 0.2
+
+class CalculateConfidencesForConsensusStudying, DoCalculationAccordingToTarget, step 3 : get  confidence of the neighbour agents
+confidences_neighbour_agents : 0.2, 
+
+class CalculateConfidencesForConsensusStudying, DoCalculationAccordingToTarget, step 4 : do calculate
+u : 0.0
+
+class CalculateConfidencesForConsensusStudying, DoCalculationAccordingToTarget, step 6 : calculate the confidence
+my_confidence(0.2) = my_previous_confidence(0.2) + u(0.0)
+class CalculateConfidencesForConsensusStudying, , step 1 : get target names, step 2 : store the confidence into the self.dict_my_agent_confidences
+confidence_to_target#2 : 0.2
+DoCalculation Ends
+----
+------------
+
+
+step 3.1 : get my agent's previous confidence, which was written in the file, file_name_my_agent_status_file
+{
+    "confidence_to_target#1": 0.19999999999999996,
+    "confidence_to_target#2": 0.2
+}
+
+step 3.2 : ask agents in the neighbour set for their information
+
+step 3.2, step (2) : get information
+{
+    "my_agent_location": {
+        "x": 1,
+        "y": 2,
+        "z": 3
+    },
+    "my_agent_name": "Agent#3_3",
+    "my_confidences_to_all_targets": {
+        "confidence_to_target#1": 0.9,
+        "confidence_to_target#3": 0.4
+    },
+    "my_sampling_time_interval_unit_second": 0.1
+}
+
+step 3.2, step (2) : get information
+{
+    "my_agent_location": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+    },
+    "my_agent_name": "Agent#3",
+    "my_confidences_to_all_targets": {
+        "confidence_to_target#1": 0.1,
+        "confidence_to_target#2": 0.2
+    },
+    "my_sampling_time_interval_unit_second": 0.5
+}
+
+step 3.2, step (3) : get confidences and recored them into the variable "neighbour_agents_confidences_to_all_targets"
+{
+    "confidence_to_target#1": [
+        0.9,
+        0.1
+    ],
+    "confidence_to_target#2": [
+        0.2
+    ]
+}
+
+class CalculateConfidencesForConsensusStudying, DoCalculationAccordingToTarget, target_name: confidence_to_target#1
+my_previous_confidence : 0.19999999999999996
+
+class CalculateConfidencesForConsensusStudying, DoCalculationAccordingToTarget, step 3 : get  confidence of the neighbour agents
+confidences_neighbour_agents : 0.9, 0.1, 
+
+class CalculateConfidencesForConsensusStudying, DoCalculationAccordingToTarget, step 4 : do calculate
+u : 0.6000000000000001
+
+class CalculateConfidencesForConsensusStudying, DoCalculationAccordingToTarget, step 6 : calculate the confidence
+my_confidence(0.8) = my_previous_confidence(0.19999999999999996) + u(0.6000000000000001)
+class CalculateConfidencesForConsensusStudying, , step 1 : get target names, step 2 : store the confidence into the self.dict_my_agent_confidences
+confidence_to_target#1 : 0.8
+DoCalculation Ends
+----
+------------
+
+
+class CalculateConfidencesForConsensusStudying, DoCalculationAccordingToTarget, target_name: confidence_to_target#2
+my_previous_confidence : 0.2
+
+class CalculateConfidencesForConsensusStudying, DoCalculationAccordingToTarget, step 3 : get  confidence of the neighbour agents
+confidences_neighbour_agents : 0.2, 
+
+class CalculateConfidencesForConsensusStudying, DoCalculationAccordingToTarget, step 4 : do calculate
+u : 0.0
+
+class CalculateConfidencesForConsensusStudying, DoCalculationAccordingToTarget, step 6 : calculate the confidence
+my_confidence(0.2) = my_previous_confidence(0.2) + u(0.0)
+class CalculateConfidencesForConsensusStudying, , step 1 : get target names, step 2 : store the confidence into the self.dict_my_agent_confidences
+confidence_to_target#2 : 0.2
+DoCalculation Ends
+----
+------------
+
+
+step 3.1 : get my agent's previous confidence, which was written in the file, file_name_my_agent_status_file
+{
+    "confidence_to_target#1": 0.8,
+    "confidence_to_target#2": 0.2
+}
+
+step 3.2 : ask agents in the neighbour set for their information
+
+step 3.2, step (2) : get information
+{
+    "my_agent_location": {
+        "x": 1,
+        "y": 2,
+        "z": 3
+    },
+    "my_agent_name": "Agent#3_3",
+    "my_confidences_to_all_targets": {
+        "confidence_to_target#1": 0.9,
+        "confidence_to_target#3": 0.4
+    },
+    "my_sampling_time_interval_unit_second": 0.1
+}
+
+step 3.2, step (2) : get information
+{
+    "my_agent_location": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+    },
+    "my_agent_name": "Agent#3",
+    "my_confidences_to_all_targets": {
+        "confidence_to_target#1": 0.1,
+        "confidence_to_target#2": 0.2
+    },
+    "my_sampling_time_interval_unit_second": 0.5
+}
+
+step 3.2, step (3) : get confidences and recored them into the variable "neighbour_agents_confidences_to_all_targets"
+{
+    "confidence_to_target#1": [
+        0.9,
+        0.1
+    ],
+    "confidence_to_target#2": [
+        0.2
+    ]
+}
+
+class CalculateConfidencesForConsensusStudying, DoCalculationAccordingToTarget, target_name: confidence_to_target#1
+my_previous_confidence : 0.8
+
+class CalculateConfidencesForConsensusStudying, DoCalculationAccordingToTarget, step 3 : get  confidence of the neighbour agents
+confidences_neighbour_agents : 0.9, 0.1, 
+
+class CalculateConfidencesForConsensusStudying, DoCalculationAccordingToTarget, step 4 : do calculate
+u : -0.6000000000000001
+
+class CalculateConfidencesForConsensusStudying, DoCalculationAccordingToTarget, step 6 : calculate the confidence
+my_confidence(0.19999999999999996) = my_previous_confidence(0.8) + u(-0.6000000000000001)
+class CalculateConfidencesForConsensusStudying, , step 1 : get target names, step 2 : store the confidence into the self.dict_my_agent_confidences
+confidence_to_target#1 : 0.19999999999999996
+DoCalculation Ends
+----
+------------
+
+
+class CalculateConfidencesForConsensusStudying, DoCalculationAccordingToTarget, target_name: confidence_to_target#2
+my_previous_confidence : 0.2
+
+class CalculateConfidencesForConsensusStudying, DoCalculationAccordingToTarget, step 3 : get  confidence of the neighbour agents
+confidences_neighbour_agents : 0.2, 
+
+class CalculateConfidencesForConsensusStudying, DoCalculationAccordingToTarget, step 4 : do calculate
+u : 0.0
+
+class CalculateConfidencesForConsensusStudying, DoCalculationAccordingToTarget, step 6 : calculate the confidence
+my_confidence(0.2) = my_previous_confidence(0.2) + u(0.0)
+class CalculateConfidencesForConsensusStudying, , step 1 : get target names, step 2 : store the confidence into the self.dict_my_agent_confidences
+confidence_to_target#2 : 0.2
+DoCalculation Ends
+----
+------------
+
+
+step 3.1 : get my agent's previous confidence, which was written in the file, file_name_my_agent_status_file
+{
+    "confidence_to_target#1": 0.19999999999999996,
+    "confidence_to_target#2": 0.2
+}
+
+step 3.2 : ask agents in the neighbour set for their information
+
+step 3.2, step (2) : get information
+{
+    "my_agent_location": {
+        "x": 1,
+        "y": 2,
+        "z": 3
+    },
+    "my_agent_name": "Agent#3_3",
+    "my_confidences_to_all_targets": {
+        "confidence_to_target#1": 0.9,
+        "confidence_to_target#3": 0.4
+    },
+    "my_sampling_time_interval_unit_second": 0.1
+}
+
+step 3.2, step (2) : get information
+{
+    "my_agent_location": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+    },
+    "my_agent_name": "Agent#3",
+    "my_confidences_to_all_targets": {
+        "confidence_to_target#1": 0.1,
+        "confidence_to_target#2": 0.2
+    },
+    "my_sampling_time_interval_unit_second": 0.5
+}
+
+step 3.2, step (3) : get confidences and recored them into the variable "neighbour_agents_confidences_to_all_targets"
+{
+    "confidence_to_target#1": [
+        0.9,
+        0.1
+    ],
+    "confidence_to_target#2": [
+        0.2
+    ]
+}
+
+class CalculateConfidencesForConsensusStudying, DoCalculationAccordingToTarget, target_name: confidence_to_target#1
+my_previous_confidence : 0.19999999999999996
+
+class CalculateConfidencesForConsensusStudying, DoCalculationAccordingToTarget, step 3 : get  confidence of the neighbour agents
+confidences_neighbour_agents : 0.9, 0.1, 
+
+class CalculateConfidencesForConsensusStudying, DoCalculationAccordingToTarget, step 4 : do calculate
+u : 0.6000000000000001
+
+class CalculateConfidencesForConsensusStudying, DoCalculationAccordingToTarget, step 6 : calculate the confidence
+my_confidence(0.8) = my_previous_confidence(0.19999999999999996) + u(0.6000000000000001)
+class CalculateConfidencesForConsensusStudying, , step 1 : get target names, step 2 : store the confidence into the self.dict_my_agent_confidences
+confidence_to_target#1 : 0.8
+DoCalculation Ends
+----
+------------
+
+
+class CalculateConfidencesForConsensusStudying, DoCalculationAccordingToTarget, target_name: confidence_to_target#2
+my_previous_confidence : 0.2
+
+class CalculateConfidencesForConsensusStudying, DoCalculationAccordingToTarget, step 3 : get  confidence of the neighbour agents
+confidences_neighbour_agents : 0.2, 
+
+class CalculateConfidencesForConsensusStudying, DoCalculationAccordingToTarget, step 4 : do calculate
+u : 0.0
+
+class CalculateConfidencesForConsensusStudying, DoCalculationAccordingToTarget, step 6 : calculate the confidence
+my_confidence(0.2) = my_previous_confidence(0.2) + u(0.0)
+class CalculateConfidencesForConsensusStudying, , step 1 : get target names, step 2 : store the confidence into the self.dict_my_agent_confidences
+confidence_to_target#2 : 0.2
+DoCalculation Ends
+----
+------------
+
+
+step 3.1 : get my agent's previous confidence, which was written in the file, file_name_my_agent_status_file
+{
+    "confidence_to_target#1": 0.8,
+    "confidence_to_target#2": 0.2
+}
+
+step 3.2 : ask agents in the neighbour set for their information
+
+step 3.2, step (2) : get information
+{
+    "my_agent_location": {
+        "x": 1,
+        "y": 2,
+        "z": 3
+    },
+    "my_agent_name": "Agent#3_3",
+    "my_confidences_to_all_targets": {
+        "confidence_to_target#1": 0.9,
+        "confidence_to_target#3": 0.4
+    },
+    "my_sampling_time_interval_unit_second": 0.1
+}
+
+step 3.2, step (2) : get information
+{
+    "my_agent_location": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+    },
+    "my_agent_name": "Agent#3",
+    "my_confidences_to_all_targets": {
+        "confidence_to_target#1": 0.1,
+        "confidence_to_target#2": 0.2
+    },
+    "my_sampling_time_interval_unit_second": 0.5
+}
+
+step 3.2, step (3) : get confidences and recored them into the variable "neighbour_agents_confidences_to_all_targets"
+{
+    "confidence_to_target#1": [
+        0.9,
+        0.1
+    ],
+    "confidence_to_target#2": [
+        0.2
+    ]
+}
+
+class CalculateConfidencesForConsensusStudying, DoCalculationAccordingToTarget, target_name: confidence_to_target#1
+my_previous_confidence : 0.8
+
+class CalculateConfidencesForConsensusStudying, DoCalculationAccordingToTarget, step 3 : get  confidence of the neighbour agents
+confidences_neighbour_agents : 0.9, 0.1, 
+
+class CalculateConfidencesForConsensusStudying, DoCalculationAccordingToTarget, step 4 : do calculate
+u : -0.6000000000000001
+
+class CalculateConfidencesForConsensusStudying, DoCalculationAccordingToTarget, step 6 : calculate the confidence
+my_confidence(0.19999999999999996) = my_previous_confidence(0.8) + u(-0.6000000000000001)
+class CalculateConfidencesForConsensusStudying, , step 1 : get target names, step 2 : store the confidence into the self.dict_my_agent_confidences
+confidence_to_target#1 : 0.19999999999999996
+DoCalculation Ends
+----
+------------
+
+
+class CalculateConfidencesForConsensusStudying, DoCalculationAccordingToTarget, target_name: confidence_to_target#2
+my_previous_confidence : 0.2
+
+class CalculateConfidencesForConsensusStudying, DoCalculationAccordingToTarget, step 3 : get  confidence of the neighbour agents
+confidences_neighbour_agents : 0.2, 
+
+class CalculateConfidencesForConsensusStudying, DoCalculationAccordingToTarget, step 4 : do calculate
+u : 0.0
+
+class CalculateConfidencesForConsensusStudying, DoCalculationAccordingToTarget, step 6 : calculate the confidence
+my_confidence(0.2) = my_previous_confidence(0.2) + u(0.0)
+class CalculateConfidencesForConsensusStudying, , step 1 : get target names, step 2 : store the confidence into the self.dict_my_agent_confidences
+confidence_to_target#2 : 0.2
+DoCalculation Ends
+----
+------------
+
+
+step 3.1 : get my agent's previous confidence, which was written in the file, file_name_my_agent_status_file
+{
+    "confidence_to_target#1": 0.19999999999999996,
+    "confidence_to_target#2": 0.2
+}
+
+step 3.2 : ask agents in the neighbour set for their information
+
+step 3.2, step (2) : get information
+{
+    "my_agent_location": {
+        "x": 1,
+        "y": 2,
+        "z": 3
+    },
+    "my_agent_name": "Agent#3_3",
+    "my_confidences_to_all_targets": {
+        "confidence_to_target#1": 0.9,
+        "confidence_to_target#3": 0.4
+    },
+    "my_sampling_time_interval_unit_second": 0.1
+}
+
+step 3.2, step (2) : get information
+{
+    "my_agent_location": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+    },
+    "my_agent_name": "Agent#3",
+    "my_confidences_to_all_targets": {
+        "confidence_to_target#1": 0.1,
+        "confidence_to_target#2": 0.2
+    },
+    "my_sampling_time_interval_unit_second": 0.5
+}
+
+step 3.2, step (3) : get confidences and recored them into the variable "neighbour_agents_confidences_to_all_targets"
+{
+    "confidence_to_target#1": [
+        0.9,
+        0.1
+    ],
+    "confidence_to_target#2": [
+        0.2
+    ]
+}
+
+class CalculateConfidencesForConsensusStudying, DoCalculationAccordingToTarget, target_name: confidence_to_target#1
+my_previous_confidence : 0.19999999999999996
+
+class CalculateConfidencesForConsensusStudying, DoCalculationAccordingToTarget, step 3 : get  confidence of the neighbour agents
+confidences_neighbour_agents : 0.9, 0.1, 
+
+class CalculateConfidencesForConsensusStudying, DoCalculationAccordingToTarget, step 4 : do calculate
+u : 0.6000000000000001
+
+class CalculateConfidencesForConsensusStudying, DoCalculationAccordingToTarget, step 6 : calculate the confidence
+my_confidence(0.8) = my_previous_confidence(0.19999999999999996) + u(0.6000000000000001)
+class CalculateConfidencesForConsensusStudying, , step 1 : get target names, step 2 : store the confidence into the self.dict_my_agent_confidences
+confidence_to_target#1 : 0.8
+DoCalculation Ends
+----
+------------
+
+
+class CalculateConfidencesForConsensusStudying, DoCalculationAccordingToTarget, target_name: confidence_to_target#2
+my_previous_confidence : 0.2
+
+class CalculateConfidencesForConsensusStudying, DoCalculationAccordingToTarget, step 3 : get  confidence of the neighbour agents
+confidences_neighbour_agents : 0.2, 
+
+class CalculateConfidencesForConsensusStudying, DoCalculationAccordingToTarget, step 4 : do calculate
+u : 0.0
+
+class CalculateConfidencesForConsensusStudying, DoCalculationAccordingToTarget, step 6 : calculate the confidence
+my_confidence(0.2) = my_previous_confidence(0.2) + u(0.0)
+class CalculateConfidencesForConsensusStudying, , step 1 : get target names, step 2 : store the confidence into the self.dict_my_agent_confidences
+confidence_to_target#2 : 0.2
+DoCalculation Ends
+----
+------------
+
+
+step 3.1 : get my agent's previous confidence, which was written in the file, file_name_my_agent_status_file
+{
+    "confidence_to_target#1": 0.8,
+    "confidence_to_target#2": 0.2
+}
+
+step 3.2 : ask agents in the neighbour set for their information
+
+step 3.2, step (2) : get information
+{
+    "my_agent_location": {
+        "x": 1,
+        "y": 2,
+        "z": 3
+    },
+    "my_agent_name": "Agent#3_3",
+    "my_confidences_to_all_targets": {
+        "confidence_to_target#1": 0.9,
+        "confidence_to_target#3": 0.4
+    },
+    "my_sampling_time_interval_unit_second": 0.1
+}
+
+step 3.2, step (2) : get information
+{
+    "my_agent_location": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+    },
+    "my_agent_name": "Agent#3",
+    "my_confidences_to_all_targets": {
+        "confidence_to_target#1": 0.1,
+        "confidence_to_target#2": 0.2
+    },
+    "my_sampling_time_interval_unit_second": 0.5
+}
+
+step 3.2, step (3) : get confidences and recored them into the variable "neighbour_agents_confidences_to_all_targets"
+{
+    "confidence_to_target#1": [
+        0.9,
+        0.1
+    ],
+    "confidence_to_target#2": [
+        0.2
+    ]
+}
+
+class CalculateConfidencesForConsensusStudying, DoCalculationAccordingToTarget, target_name: confidence_to_target#1
+my_previous_confidence : 0.8
+
+class CalculateConfidencesForConsensusStudying, DoCalculationAccordingToTarget, step 3 : get  confidence of the neighbour agents
+confidences_neighbour_agents : 0.9, 0.1, 
+
+class CalculateConfidencesForConsensusStudying, DoCalculationAccordingToTarget, step 4 : do calculate
+u : -0.6000000000000001
+
+class CalculateConfidencesForConsensusStudying, DoCalculationAccordingToTarget, step 6 : calculate the confidence
+my_confidence(0.19999999999999996) = my_previous_confidence(0.8) + u(-0.6000000000000001)
+class CalculateConfidencesForConsensusStudying, , step 1 : get target names, step 2 : store the confidence into the self.dict_my_agent_confidences
+confidence_to_target#1 : 0.19999999999999996
+DoCalculation Ends
+----
+------------
+
+
+class CalculateConfidencesForConsensusStudying, DoCalculationAccordingToTarget, target_name: confidence_to_target#2
+my_previous_confidence : 0.2
+
+class CalculateConfidencesForConsensusStudying, DoCalculationAccordingToTarget, step 3 : get  confidence of the neighbour agents
+confidences_neighbour_agents : 0.2, 
+
+class CalculateConfidencesForConsensusStudying, DoCalculationAccordingToTarget, step 4 : do calculate
+u : 0.0
+
+class CalculateConfidencesForConsensusStudying, DoCalculationAccordingToTarget, step 6 : calculate the confidence
+my_confidence(0.2) = my_previous_confidence(0.2) + u(0.0)
+class CalculateConfidencesForConsensusStudying, , step 1 : get target names, step 2 : store the confidence into the self.dict_my_agent_confidences
+confidence_to_target#2 : 0.2
+DoCalculation Ends
+----
+------------
+
+
+step 3.1 : get my agent's previous confidence, which was written in the file, file_name_my_agent_status_file
+{
+    "confidence_to_target#1": 0.19999999999999996,
+    "confidence_to_target#2": 0.2
+}
+
+step 3.2 : ask agents in the neighbour set for their information
+
+step 3.2, step (2) : get information
+{
+    "my_agent_location": {
+        "x": 1,
+        "y": 2,
+        "z": 3
+    },
+    "my_agent_name": "Agent#3_3",
+    "my_confidences_to_all_targets": {
+        "confidence_to_target#1": 0.9,
+        "confidence_to_target#3": 0.4
+    },
+    "my_sampling_time_interval_unit_second": 0.1
+}
+
+step 3.2, step (2) : get information
+{
+    "my_agent_location": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+    },
+    "my_agent_name": "Agent#3",
+    "my_confidences_to_all_targets": {
+        "confidence_to_target#1": 0.1,
+        "confidence_to_target#2": 0.2
+    },
+    "my_sampling_time_interval_unit_second": 0.5
+}
+
+step 3.2, step (3) : get confidences and recored them into the variable "neighbour_agents_confidences_to_all_targets"
+{
+    "confidence_to_target#1": [
+        0.9,
+        0.1
+    ],
+    "confidence_to_target#2": [
+        0.2
+    ]
+}
+
+class CalculateConfidencesForConsensusStudying, DoCalculationAccordingToTarget, target_name: confidence_to_target#1
+my_previous_confidence : 0.19999999999999996
+
+class CalculateConfidencesForConsensusStudying, DoCalculationAccordingToTarget, step 3 : get  confidence of the neighbour agents
+confidences_neighbour_agents : 0.9, 0.1, 
+
+class CalculateConfidencesForConsensusStudying, DoCalculationAccordingToTarget, step 4 : do calculate
+u : 0.6000000000000001
+
+class CalculateConfidencesForConsensusStudying, DoCalculationAccordingToTarget, step 6 : calculate the confidence
+my_confidence(0.8) = my_previous_confidence(0.19999999999999996) + u(0.6000000000000001)
+class CalculateConfidencesForConsensusStudying, , step 1 : get target names, step 2 : store the confidence into the self.dict_my_agent_confidences
+confidence_to_target#1 : 0.8
+DoCalculation Ends
+----
+------------
+
+
+class CalculateConfidencesForConsensusStudying, DoCalculationAccordingToTarget, target_name: confidence_to_target#2
+my_previous_confidence : 0.2
+
+class CalculateConfidencesForConsensusStudying, DoCalculationAccordingToTarget, step 3 : get  confidence of the neighbour agents
+confidences_neighbour_agents : 0.2, 
+
+class CalculateConfidencesForConsensusStudying, DoCalculationAccordingToTarget, step 4 : do calculate
+u : 0.0
+
+class CalculateConfidencesForConsensusStudying, DoCalculationAccordingToTarget, step 6 : calculate the confidence
+my_confidence(0.2) = my_previous_confidence(0.2) + u(0.0)
+class CalculateConfidencesForConsensusStudying, , step 1 : get target names, step 2 : store the confidence into the self.dict_my_agent_confidences
+confidence_to_target#2 : 0.2
+DoCalculation Ends
+----
+------------
+
+
+step 3.1 : get my agent's previous confidence, which was written in the file, file_name_my_agent_status_file
+{
+    "confidence_to_target#1": 0.8,
+    "confidence_to_target#2": 0.2
+}
+
+step 3.2 : ask agents in the neighbour set for their information
+
+step 3.2, step (2) : get information
+{
+    "my_agent_location": {
+        "x": 1,
+        "y": 2,
+        "z": 3
+    },
+    "my_agent_name": "Agent#3_3",
+    "my_confidences_to_all_targets": {
+        "confidence_to_target#1": 0.9,
+        "confidence_to_target#3": 0.4
+    },
+    "my_sampling_time_interval_unit_second": 0.1
+}
+
+step 3.2, step (2) : get information
+{
+    "my_agent_location": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+    },
+    "my_agent_name": "Agent#3",
+    "my_confidences_to_all_targets": {
+        "confidence_to_target#1": 0.1,
+        "confidence_to_target#2": 0.2
+    },
+    "my_sampling_time_interval_unit_second": 0.5
+}
+
+step 3.2, step (3) : get confidences and recored them into the variable "neighbour_agents_confidences_to_all_targets"
+{
+    "confidence_to_target#1": [
+        0.9,
+        0.1
+    ],
+    "confidence_to_target#2": [
+        0.2
+    ]
+}
+
+class CalculateConfidencesForConsensusStudying, DoCalculationAccordingToTarget, target_name: confidence_to_target#1
+my_previous_confidence : 0.8
+
+class CalculateConfidencesForConsensusStudying, DoCalculationAccordingToTarget, step 3 : get  confidence of the neighbour agents
+confidences_neighbour_agents : 0.9, 0.1, 
+
+class CalculateConfidencesForConsensusStudying, DoCalculationAccordingToTarget, step 4 : do calculate
+u : -0.6000000000000001
+
+class CalculateConfidencesForConsensusStudying, DoCalculationAccordingToTarget, step 6 : calculate the confidence
+my_confidence(0.19999999999999996) = my_previous_confidence(0.8) + u(-0.6000000000000001)
+class CalculateConfidencesForConsensusStudying, , step 1 : get target names, step 2 : store the confidence into the self.dict_my_agent_confidences
+confidence_to_target#1 : 0.19999999999999996
+DoCalculation Ends
+----
+------------
+
+
+class CalculateConfidencesForConsensusStudying, DoCalculationAccordingToTarget, target_name: confidence_to_target#2
+my_previous_confidence : 0.2
+
+class CalculateConfidencesForConsensusStudying, DoCalculationAccordingToTarget, step 3 : get  confidence of the neighbour agents
+confidences_neighbour_agents : 0.2, 
+
+class CalculateConfidencesForConsensusStudying, DoCalculationAccordingToTarget, step 4 : do calculate
+u : 0.0
+
+class CalculateConfidencesForConsensusStudying, DoCalculationAccordingToTarget, step 6 : calculate the confidence
+my_confidence(0.2) = my_previous_confidence(0.2) + u(0.0)
+class CalculateConfidencesForConsensusStudying, , step 1 : get target names, step 2 : store the confidence into the self.dict_my_agent_confidences
+confidence_to_target#2 : 0.2
+DoCalculation Ends
+----
+------------
+
+
+step 3.1 : get my agent's previous confidence, which was written in the file, file_name_my_agent_status_file
+{
+    "confidence_to_target#1": 0.19999999999999996,
+    "confidence_to_target#2": 0.2
+}
+
+step 3.2 : ask agents in the neighbour set for their information
+
+step 3.2, step (2) : get information
+{
+    "my_agent_location": {
+        "x": 1,
+        "y": 2,
+        "z": 3
+    },
+    "my_agent_name": "Agent#3_3",
+    "my_confidences_to_all_targets": {
+        "confidence_to_target#1": 0.9,
+        "confidence_to_target#3": 0.4
+    },
+    "my_sampling_time_interval_unit_second": 0.1
+}
+
+step 3.2, step (2) : get information
+{
+    "my_agent_location": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+    },
+    "my_agent_name": "Agent#3",
+    "my_confidences_to_all_targets": {
+        "confidence_to_target#1": 0.1,
+        "confidence_to_target#2": 0.2
+    },
+    "my_sampling_time_interval_unit_second": 0.5
+}
+
+step 3.2, step (3) : get confidences and recored them into the variable "neighbour_agents_confidences_to_all_targets"
+{
+    "confidence_to_target#1": [
+        0.9,
+        0.1
+    ],
+    "confidence_to_target#2": [
+        0.2
+    ]
+}
+
+class CalculateConfidencesForConsensusStudying, DoCalculationAccordingToTarget, target_name: confidence_to_target#1
+my_previous_confidence : 0.19999999999999996
+
+class CalculateConfidencesForConsensusStudying, DoCalculationAccordingToTarget, step 3 : get  confidence of the neighbour agents
+confidences_neighbour_agents : 0.9, 0.1, 
+
+class CalculateConfidencesForConsensusStudying, DoCalculationAccordingToTarget, step 4 : do calculate
+u : 0.6000000000000001
+
+class CalculateConfidencesForConsensusStudying, DoCalculationAccordingToTarget, step 6 : calculate the confidence
+my_confidence(0.8) = my_previous_confidence(0.19999999999999996) + u(0.6000000000000001)
+class CalculateConfidencesForConsensusStudying, , step 1 : get target names, step 2 : store the confidence into the self.dict_my_agent_confidences
+confidence_to_target#1 : 0.8
+DoCalculation Ends
+----
+------------
+
+
+class CalculateConfidencesForConsensusStudying, DoCalculationAccordingToTarget, target_name: confidence_to_target#2
+my_previous_confidence : 0.2
+
+class CalculateConfidencesForConsensusStudying, DoCalculationAccordingToTarget, step 3 : get  confidence of the neighbour agents
+confidences_neighbour_agents : 0.2, 
+
+class CalculateConfidencesForConsensusStudying, DoCalculationAccordingToTarget, step 4 : do calculate
+u : 0.0
+
+class CalculateConfidencesForConsensusStudying, DoCalculationAccordingToTarget, step 6 : calculate the confidence
+my_confidence(0.2) = my_previous_confidence(0.2) + u(0.0)
+class CalculateConfidencesForConsensusStudying, , step 1 : get target names, step 2 : store the confidence into the self.dict_my_agent_confidences
+confidence_to_target#2 : 0.2
+DoCalculation Ends
+----
+------------
+
+
+step 3.1 : get my agent's previous confidence, which was written in the file, file_name_my_agent_status_file
+{
+    "confidence_to_target#1": 0.8,
+    "confidence_to_target#2": 0.2
+}
+
+step 3.2 : ask agents in the neighbour set for their information
+
+step 3.2, step (2) : get information
+{
+    "my_agent_location": {
+        "x": 1,
+        "y": 2,
+        "z": 3
+    },
+    "my_agent_name": "Agent#3_3",
+    "my_confidences_to_all_targets": {
+        "confidence_to_target#1": 0.9,
+        "confidence_to_target#3": 0.4
+    },
+    "my_sampling_time_interval_unit_second": 0.1
+}
+
+step 3.2, step (2) : get information
+{
+    "my_agent_location": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+    },
+    "my_agent_name": "Agent#3",
+    "my_confidences_to_all_targets": {
+        "confidence_to_target#1": 0.1,
+        "confidence_to_target#2": 0.2
+    },
+    "my_sampling_time_interval_unit_second": 0.5
+}
+
+step 3.2, step (3) : get confidences and recored them into the variable "neighbour_agents_confidences_to_all_targets"
+{
+    "confidence_to_target#1": [
+        0.9,
+        0.1
+    ],
+    "confidence_to_target#2": [
+        0.2
+    ]
+}
+
+class CalculateConfidencesForConsensusStudying, DoCalculationAccordingToTarget, target_name: confidence_to_target#1
+my_previous_confidence : 0.8
+
+class CalculateConfidencesForConsensusStudying, DoCalculationAccordingToTarget, step 3 : get  confidence of the neighbour agents
+confidences_neighbour_agents : 0.9, 0.1, 
+
+class CalculateConfidencesForConsensusStudying, DoCalculationAccordingToTarget, step 4 : do calculate
+u : -0.6000000000000001
+
+class CalculateConfidencesForConsensusStudying, DoCalculationAccordingToTarget, step 6 : calculate the confidence
+my_confidence(0.19999999999999996) = my_previous_confidence(0.8) + u(-0.6000000000000001)
+class CalculateConfidencesForConsensusStudying, , step 1 : get target names, step 2 : store the confidence into the self.dict_my_agent_confidences
+confidence_to_target#1 : 0.19999999999999996
+DoCalculation Ends
+----
+------------
+
+
+class CalculateConfidencesForConsensusStudying, DoCalculationAccordingToTarget, target_name: confidence_to_target#2
+my_previous_confidence : 0.2
+
+class CalculateConfidencesForConsensusStudying, DoCalculationAccordingToTarget, step 3 : get  confidence of the neighbour agents
+confidences_neighbour_agents : 0.2, 
+
+class CalculateConfidencesForConsensusStudying, DoCalculationAccordingToTarget, step 4 : do calculate
+u : 0.0
+
+class CalculateConfidencesForConsensusStudying, DoCalculationAccordingToTarget, step 6 : calculate the confidence
+my_confidence(0.2) = my_previous_confidence(0.2) + u(0.0)
+class CalculateConfidencesForConsensusStudying, , step 1 : get target names, step 2 : store the confidence into the self.dict_my_agent_confidences
+confidence_to_target#2 : 0.2
+DoCalculation Ends
+----
+------------
+
+
+step 3.1 : get my agent's previous confidence, which was written in the file, file_name_my_agent_status_file
+{
+    "confidence_to_target#1": 0.19999999999999996,
+    "confidence_to_target#2": 0.2
+}
+
+step 3.2 : ask agents in the neighbour set for their information
+
+step 3.2, step (2) : get information
+{
+    "my_agent_location": {
+        "x": 1,
+        "y": 2,
+        "z": 3
+    },
+    "my_agent_name": "Agent#3_3",
+    "my_confidences_to_all_targets": {
+        "confidence_to_target#1": 0.9,
+        "confidence_to_target#3": 0.4
+    },
+    "my_sampling_time_interval_unit_second": 0.1
+}
+
+step 3.2, step (2) : get information
+{
+    "my_agent_location": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+    },
+    "my_agent_name": "Agent#3",
+    "my_confidences_to_all_targets": {
+        "confidence_to_target#1": 0.1,
+        "confidence_to_target#2": 0.2
+    },
+    "my_sampling_time_interval_unit_second": 0.5
+}
+
+step 3.2, step (3) : get confidences and recored them into the variable "neighbour_agents_confidences_to_all_targets"
+{
+    "confidence_to_target#1": [
+        0.9,
+        0.1
+    ],
+    "confidence_to_target#2": [
+        0.2
+    ]
+}
+
+class CalculateConfidencesForConsensusStudying, DoCalculationAccordingToTarget, target_name: confidence_to_target#1
+my_previous_confidence : 0.19999999999999996
+
+class CalculateConfidencesForConsensusStudying, DoCalculationAccordingToTarget, step 3 : get  confidence of the neighbour agents
+confidences_neighbour_agents : 0.9, 0.1, 
+
+class CalculateConfidencesForConsensusStudying, DoCalculationAccordingToTarget, step 4 : do calculate
+u : 0.6000000000000001
+
+class CalculateConfidencesForConsensusStudying, DoCalculationAccordingToTarget, step 6 : calculate the confidence
+my_confidence(0.8) = my_previous_confidence(0.19999999999999996) + u(0.6000000000000001)
+class CalculateConfidencesForConsensusStudying, , step 1 : get target names, step 2 : store the confidence into the self.dict_my_agent_confidences
+confidence_to_target#1 : 0.8
+DoCalculation Ends
+----
+------------
+
+
+class CalculateConfidencesForConsensusStudying, DoCalculationAccordingToTarget, target_name: confidence_to_target#2
+my_previous_confidence : 0.2
+
+class CalculateConfidencesForConsensusStudying, DoCalculationAccordingToTarget, step 3 : get  confidence of the neighbour agents
+confidences_neighbour_agents : 0.2, 
+
+class CalculateConfidencesForConsensusStudying, DoCalculationAccordingToTarget, step 4 : do calculate
+u : 0.0
+
+class CalculateConfidencesForConsensusStudying, DoCalculationAccordingToTarget, step 6 : calculate the confidence
+my_confidence(0.2) = my_previous_confidence(0.2) + u(0.0)
+class CalculateConfidencesForConsensusStudying, , step 1 : get target names, step 2 : store the confidence into the self.dict_my_agent_confidences
+confidence_to_target#2 : 0.2
+DoCalculation Ends
+----
+------------
+
+
+step 3.1 : get my agent's previous confidence, which was written in the file, file_name_my_agent_status_file
+{
+    "confidence_to_target#1": 0.8,
+    "confidence_to_target#2": 0.2
+}
+
+step 3.2 : ask agents in the neighbour set for their information
+
+step 3.2, step (2) : get information
+{
+    "my_agent_location": {
+        "x": 1,
+        "y": 2,
+        "z": 3
+    },
+    "my_agent_name": "Agent#3_3",
+    "my_confidences_to_all_targets": {
+        "confidence_to_target#1": 0.9,
+        "confidence_to_target#3": 0.4
+    },
+    "my_sampling_time_interval_unit_second": 0.1
+}
+
+step 3.2, step (2) : get information
+{
+    "my_agent_location": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+    },
+    "my_agent_name": "Agent#3",
+    "my_confidences_to_all_targets": {
+        "confidence_to_target#1": 0.1,
+        "confidence_to_target#2": 0.2
+    },
+    "my_sampling_time_interval_unit_second": 0.5
+}
+
+step 3.2, step (3) : get confidences and recored them into the variable "neighbour_agents_confidences_to_all_targets"
+{
+    "confidence_to_target#1": [
+        0.9,
+        0.1
+    ],
+    "confidence_to_target#2": [
+        0.2
+    ]
+}
+
+class CalculateConfidencesForConsensusStudying, DoCalculationAccordingToTarget, target_name: confidence_to_target#1
+my_previous_confidence : 0.8
+
+class CalculateConfidencesForConsensusStudying, DoCalculationAccordingToTarget, step 3 : get  confidence of the neighbour agents
+confidences_neighbour_agents : 0.9, 0.1, 
+
+class CalculateConfidencesForConsensusStudying, DoCalculationAccordingToTarget, step 4 : do calculate
+u : -0.6000000000000001
+
+class CalculateConfidencesForConsensusStudying, DoCalculationAccordingToTarget, step 6 : calculate the confidence
+my_confidence(0.19999999999999996) = my_previous_confidence(0.8) + u(-0.6000000000000001)
+class CalculateConfidencesForConsensusStudying, , step 1 : get target names, step 2 : store the confidence into the self.dict_my_agent_confidences
+confidence_to_target#1 : 0.19999999999999996
+DoCalculation Ends
+----
+------------
+
+
+class CalculateConfidencesForConsensusStudying, DoCalculationAccordingToTarget, target_name: confidence_to_target#2
+my_previous_confidence : 0.2
+
+class CalculateConfidencesForConsensusStudying, DoCalculationAccordingToTarget, step 3 : get  confidence of the neighbour agents
+confidences_neighbour_agents : 0.2, 
+
+class CalculateConfidencesForConsensusStudying, DoCalculationAccordingToTarget, step 4 : do calculate
+u : 0.0
+
+class CalculateConfidencesForConsensusStudying, DoCalculationAccordingToTarget, step 6 : calculate the confidence
+my_confidence(0.2) = my_previous_confidence(0.2) + u(0.0)
+class CalculateConfidencesForConsensusStudying, , step 1 : get target names, step 2 : store the confidence into the self.dict_my_agent_confidences
+confidence_to_target#2 : 0.2
+DoCalculation Ends
+----
+------------
+
+
+step 3.1 : get my agent's previous confidence, which was written in the file, file_name_my_agent_status_file
+{
+    "confidence_to_target#1": 0.19999999999999996,
+    "confidence_to_target#2": 0.2
+}
+
+step 3.2 : ask agents in the neighbour set for their information
+
+step 3.2, step (2) : get information
+{
+    "my_agent_location": {
+        "x": 1,
+        "y": 2,
+        "z": 3
+    },
+    "my_agent_name": "Agent#3_3",
+    "my_confidences_to_all_targets": {
+        "confidence_to_target#1": 0.9,
+        "confidence_to_target#3": 0.4
+    },
+    "my_sampling_time_interval_unit_second": 0.1
+}
+
+step 3.2, step (2) : get information
+{
+    "my_agent_location": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+    },
+    "my_agent_name": "Agent#3",
+    "my_confidences_to_all_targets": {
+        "confidence_to_target#1": 0.1,
+        "confidence_to_target#2": 0.2
+    },
+    "my_sampling_time_interval_unit_second": 0.5
+}
+
+step 3.2, step (3) : get confidences and recored them into the variable "neighbour_agents_confidences_to_all_targets"
+{
+    "confidence_to_target#1": [
+        0.9,
+        0.1
+    ],
+    "confidence_to_target#2": [
+        0.2
+    ]
+}
+
+class CalculateConfidencesForConsensusStudying, DoCalculationAccordingToTarget, target_name: confidence_to_target#1
+my_previous_confidence : 0.19999999999999996
+
+class CalculateConfidencesForConsensusStudying, DoCalculationAccordingToTarget, step 3 : get  confidence of the neighbour agents
+confidences_neighbour_agents : 0.9, 0.1, 
+
+class CalculateConfidencesForConsensusStudying, DoCalculationAccordingToTarget, step 4 : do calculate
+u : 0.6000000000000001
+
+class CalculateConfidencesForConsensusStudying, DoCalculationAccordingToTarget, step 6 : calculate the confidence
+my_confidence(0.8) = my_previous_confidence(0.19999999999999996) + u(0.6000000000000001)
+class CalculateConfidencesForConsensusStudying, , step 1 : get target names, step 2 : store the confidence into the self.dict_my_agent_confidences
+confidence_to_target#1 : 0.8
+DoCalculation Ends
+----
+------------
+
+
+class CalculateConfidencesForConsensusStudying, DoCalculationAccordingToTarget, target_name: confidence_to_target#2
+my_previous_confidence : 0.2
+
+class CalculateConfidencesForConsensusStudying, DoCalculationAccordingToTarget, step 3 : get  confidence of the neighbour agents
+confidences_neighbour_agents : 0.2, 
+
+class CalculateConfidencesForConsensusStudying, DoCalculationAccordingToTarget, step 4 : do calculate
+u : 0.0
+
+class CalculateConfidencesForConsensusStudying, DoCalculationAccordingToTarget, step 6 : calculate the confidence
+my_confidence(0.2) = my_previous_confidence(0.2) + u(0.0)
+class CalculateConfidencesForConsensusStudying, , step 1 : get target names, step 2 : store the confidence into the self.dict_my_agent_confidences
+confidence_to_target#2 : 0.2
+DoCalculation Ends
+----
+------------
+
+
+step 3.1 : get my agent's previous confidence, which was written in the file, file_name_my_agent_status_file
+{
+    "confidence_to_target#1": 0.8,
+    "confidence_to_target#2": 0.2
+}
+
+step 3.2 : ask agents in the neighbour set for their information
+
+step 3.2, step (2) : get information
+{
+    "my_agent_location": {
+        "x": 1,
+        "y": 2,
+        "z": 3
+    },
+    "my_agent_name": "Agent#3_3",
+    "my_confidences_to_all_targets": {
+        "confidence_to_target#1": 0.9,
+        "confidence_to_target#3": 0.4
+    },
+    "my_sampling_time_interval_unit_second": 0.1
+}
+
+step 3.2, step (2) : get information
+{
+    "my_agent_location": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+    },
+    "my_agent_name": "Agent#3",
+    "my_confidences_to_all_targets": {
+        "confidence_to_target#1": 0.1,
+        "confidence_to_target#2": 0.2
+    },
+    "my_sampling_time_interval_unit_second": 0.5
+}
+
+step 3.2, step (3) : get confidences and recored them into the variable "neighbour_agents_confidences_to_all_targets"
+{
+    "confidence_to_target#1": [
+        0.9,
+        0.1
+    ],
+    "confidence_to_target#2": [
+        0.2
+    ]
+}
+
+class CalculateConfidencesForConsensusStudying, DoCalculationAccordingToTarget, target_name: confidence_to_target#1
+my_previous_confidence : 0.8
+
+class CalculateConfidencesForConsensusStudying, DoCalculationAccordingToTarget, step 3 : get  confidence of the neighbour agents
+confidences_neighbour_agents : 0.9, 0.1, 
+
+class CalculateConfidencesForConsensusStudying, DoCalculationAccordingToTarget, step 4 : do calculate
+u : -0.6000000000000001
+
+class CalculateConfidencesForConsensusStudying, DoCalculationAccordingToTarget, step 6 : calculate the confidence
+my_confidence(0.19999999999999996) = my_previous_confidence(0.8) + u(-0.6000000000000001)
+class CalculateConfidencesForConsensusStudying, , step 1 : get target names, step 2 : store the confidence into the self.dict_my_agent_confidences
+confidence_to_target#1 : 0.19999999999999996
+DoCalculation Ends
+----
+------------
+
+
+class CalculateConfidencesForConsensusStudying, DoCalculationAccordingToTarget, target_name: confidence_to_target#2
+my_previous_confidence : 0.2
+
+class CalculateConfidencesForConsensusStudying, DoCalculationAccordingToTarget, step 3 : get  confidence of the neighbour agents
+confidences_neighbour_agents : 0.2, 
+
+class CalculateConfidencesForConsensusStudying, DoCalculationAccordingToTarget, step 4 : do calculate
+u : 0.0
+
+class CalculateConfidencesForConsensusStudying, DoCalculationAccordingToTarget, step 6 : calculate the confidence
+my_confidence(0.2) = my_previous_confidence(0.2) + u(0.0)
+class CalculateConfidencesForConsensusStudying, , step 1 : get target names, step 2 : store the confidence into the self.dict_my_agent_confidences
+confidence_to_target#2 : 0.2
+DoCalculation Ends
+----
+------------
+
+
+step 3.1 : get my agent's previous confidence, which was written in the file, file_name_my_agent_status_file
+{
+    "confidence_to_target#1": 0.19999999999999996,
+    "confidence_to_target#2": 0.2
+}
+
+step 3.2 : ask agents in the neighbour set for their information
+
+step 3.2, step (2) : get information
+{
+    "my_agent_location": {
+        "x": 1,
+        "y": 2,
+        "z": 3
+    },
+    "my_agent_name": "Agent#3_3",
+    "my_confidences_to_all_targets": {
+        "confidence_to_target#1": 0.9,
+        "confidence_to_target#3": 0.4
+    },
+    "my_sampling_time_interval_unit_second": 0.1
+}
+
+step 3.2, step (2) : get information
+{
+    "my_agent_location": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+    },
+    "my_agent_name": "Agent#3",
+    "my_confidences_to_all_targets": {
+        "confidence_to_target#1": 0.1,
+        "confidence_to_target#2": 0.2
+    },
+    "my_sampling_time_interval_unit_second": 0.5
+}
+
+step 3.2, step (3) : get confidences and recored them into the variable "neighbour_agents_confidences_to_all_targets"
+{
+    "confidence_to_target#1": [
+        0.9,
+        0.1
+    ],
+    "confidence_to_target#2": [
+        0.2
+    ]
+}
+
+class CalculateConfidencesForConsensusStudying, DoCalculationAccordingToTarget, target_name: confidence_to_target#1
+my_previous_confidence : 0.19999999999999996
+
+class CalculateConfidencesForConsensusStudying, DoCalculationAccordingToTarget, step 3 : get  confidence of the neighbour agents
+confidences_neighbour_agents : 0.9, 0.1, 
+
+class CalculateConfidencesForConsensusStudying, DoCalculationAccordingToTarget, step 4 : do calculate
+u : 0.6000000000000001
+
+class CalculateConfidencesForConsensusStudying, DoCalculationAccordingToTarget, step 6 : calculate the confidence
+my_confidence(0.8) = my_previous_confidence(0.19999999999999996) + u(0.6000000000000001)
+class CalculateConfidencesForConsensusStudying, , step 1 : get target names, step 2 : store the confidence into the self.dict_my_agent_confidences
+confidence_to_target#1 : 0.8
+DoCalculation Ends
+----
+------------
+
+
+class CalculateConfidencesForConsensusStudying, DoCalculationAccordingToTarget, target_name: confidence_to_target#2
+my_previous_confidence : 0.2
+
+class CalculateConfidencesForConsensusStudying, DoCalculationAccordingToTarget, step 3 : get  confidence of the neighbour agents
+confidences_neighbour_agents : 0.2, 
+
+class CalculateConfidencesForConsensusStudying, DoCalculationAccordingToTarget, step 4 : do calculate
+u : 0.0
+
+class CalculateConfidencesForConsensusStudying, DoCalculationAccordingToTarget, step 6 : calculate the confidence
+my_confidence(0.2) = my_previous_confidence(0.2) + u(0.0)
+class CalculateConfidencesForConsensusStudying, , step 1 : get target names, step 2 : store the confidence into the self.dict_my_agent_confidences
+confidence_to_target#2 : 0.2
+DoCalculation Ends
+----
+------------
+
+
+step 3.1 : get my agent's previous confidence, which was written in the file, file_name_my_agent_status_file
+{
+    "confidence_to_target#1": 0.8,
+    "confidence_to_target#2": 0.2
+}
+
+step 3.2 : ask agents in the neighbour set for their information
+
+step 3.2, step (2) : get information
+{
+    "my_agent_location": {
+        "x": 1,
+        "y": 2,
+        "z": 3
+    },
+    "my_agent_name": "Agent#3_3",
+    "my_confidences_to_all_targets": {
+        "confidence_to_target#1": 0.9,
+        "confidence_to_target#3": 0.4
+    },
+    "my_sampling_time_interval_unit_second": 0.1
+}
+
+step 3.2, step (2) : get information
+{
+    "my_agent_location": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+    },
+    "my_agent_name": "Agent#3",
+    "my_confidences_to_all_targets": {
+        "confidence_to_target#1": 0.1,
+        "confidence_to_target#2": 0.2
+    },
+    "my_sampling_time_interval_unit_second": 0.5
+}
+
+step 3.2, step (3) : get confidences and recored them into the variable "neighbour_agents_confidences_to_all_targets"
+{
+    "confidence_to_target#1": [
+        0.9,
+        0.1
+    ],
+    "confidence_to_target#2": [
+        0.2
+    ]
+}
+
+class CalculateConfidencesForConsensusStudying, DoCalculationAccordingToTarget, target_name: confidence_to_target#1
+my_previous_confidence : 0.8
+
+class CalculateConfidencesForConsensusStudying, DoCalculationAccordingToTarget, step 3 : get  confidence of the neighbour agents
+confidences_neighbour_agents : 0.9, 0.1, 
+
+class CalculateConfidencesForConsensusStudying, DoCalculationAccordingToTarget, step 4 : do calculate
+u : -0.6000000000000001
+
+class CalculateConfidencesForConsensusStudying, DoCalculationAccordingToTarget, step 6 : calculate the confidence
+my_confidence(0.19999999999999996) = my_previous_confidence(0.8) + u(-0.6000000000000001)
+class CalculateConfidencesForConsensusStudying, , step 1 : get target names, step 2 : store the confidence into the self.dict_my_agent_confidences
+confidence_to_target#1 : 0.19999999999999996
+DoCalculation Ends
+----
+------------
+
+
+class CalculateConfidencesForConsensusStudying, DoCalculationAccordingToTarget, target_name: confidence_to_target#2
+my_previous_confidence : 0.2
+
+class CalculateConfidencesForConsensusStudying, DoCalculationAccordingToTarget, step 3 : get  confidence of the neighbour agents
+confidences_neighbour_agents : 0.2, 
+
+class CalculateConfidencesForConsensusStudying, DoCalculationAccordingToTarget, step 4 : do calculate
+u : 0.0
+
+class CalculateConfidencesForConsensusStudying, DoCalculationAccordingToTarget, step 6 : calculate the confidence
+my_confidence(0.2) = my_previous_confidence(0.2) + u(0.0)
+class CalculateConfidencesForConsensusStudying, , step 1 : get target names, step 2 : store the confidence into the self.dict_my_agent_confidences
+confidence_to_target#2 : 0.2
+DoCalculation Ends
+----
+------------
+
+
+step 3.1 : get my agent's previous confidence, which was written in the file, file_name_my_agent_status_file
+{
+    "confidence_to_target#1": 0.19999999999999996,
+    "confidence_to_target#2": 0.2
+}
+
+step 3.2 : ask agents in the neighbour set for their information
+
+step 3.2, step (2) : get information
+{
+    "my_agent_location": {
+        "x": 1,
+        "y": 2,
+        "z": 3
+    },
+    "my_agent_name": "Agent#3_3",
+    "my_confidences_to_all_targets": {
+        "confidence_to_target#1": 0.9,
+        "confidence_to_target#3": 0.4
+    },
+    "my_sampling_time_interval_unit_second": 0.1
+}
+
+step 3.2, step (2) : get information
+{
+    "my_agent_location": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+    },
+    "my_agent_name": "Agent#3",
+    "my_confidences_to_all_targets": {
+        "confidence_to_target#1": 0.1,
+        "confidence_to_target#2": 0.2
+    },
+    "my_sampling_time_interval_unit_second": 0.5
+}
+
+step 3.2, step (3) : get confidences and recored them into the variable "neighbour_agents_confidences_to_all_targets"
+{
+    "confidence_to_target#1": [
+        0.9,
+        0.1
+    ],
+    "confidence_to_target#2": [
+        0.2
+    ]
+}
+
+class CalculateConfidencesForConsensusStudying, DoCalculationAccordingToTarget, target_name: confidence_to_target#1
+my_previous_confidence : 0.19999999999999996
+
+class CalculateConfidencesForConsensusStudying, DoCalculationAccordingToTarget, step 3 : get  confidence of the neighbour agents
+confidences_neighbour_agents : 0.9, 0.1, 
+
+class CalculateConfidencesForConsensusStudying, DoCalculationAccordingToTarget, step 4 : do calculate
+u : 0.6000000000000001
+
+class CalculateConfidencesForConsensusStudying, DoCalculationAccordingToTarget, step 6 : calculate the confidence
+my_confidence(0.8) = my_previous_confidence(0.19999999999999996) + u(0.6000000000000001)
+class CalculateConfidencesForConsensusStudying, , step 1 : get target names, step 2 : store the confidence into the self.dict_my_agent_confidences
+confidence_to_target#1 : 0.8
+DoCalculation Ends
+----
+------------
+
+
+class CalculateConfidencesForConsensusStudying, DoCalculationAccordingToTarget, target_name: confidence_to_target#2
+my_previous_confidence : 0.2
+
+class CalculateConfidencesForConsensusStudying, DoCalculationAccordingToTarget, step 3 : get  confidence of the neighbour agents
+confidences_neighbour_agents : 0.2, 
+
+class CalculateConfidencesForConsensusStudying, DoCalculationAccordingToTarget, step 4 : do calculate
+u : 0.0
+
+class CalculateConfidencesForConsensusStudying, DoCalculationAccordingToTarget, step 6 : calculate the confidence
+my_confidence(0.2) = my_previous_confidence(0.2) + u(0.0)
+class CalculateConfidencesForConsensusStudying, , step 1 : get target names, step 2 : store the confidence into the self.dict_my_agent_confidences
+confidence_to_target#2 : 0.2
+DoCalculation Ends
+----
+------------
+

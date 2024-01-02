@@ -1,15 +1,13 @@
 {
-    "my_agent_name"  :"Agent#3_2", 
-    "my_agent_location":
-    {
-        "x":1,
-        "y":2,
-        "z":3
+    "my_agent_name": "Agent#3_2",
+    "my_sampling_time_interval_unit_second": 0.1,
+    "my_agent_location": {
+        "x": 1,
+        "y": 2,
+        "z": 3
     },
-    "my_confidences_to_all_targets":
-    {
-        "confidence_to_target#1":0.8,
-        "confidence_to_target#2":0.2
-    },
-    "my_sampling_time_interval_unit_second":0.1
+    "my_confidences_to_all_targets": {
+        "confidence_to_target#1": 0.8,
+        "confidence_to_target#2": 0.2
+    }
 }

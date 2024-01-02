@@ -10,10 +10,14 @@ sys.path.append("./utilities")
 from import_agent_host_and_port import *
 from import_my_agent_status import *
 from import_my_program_verbose_level import *
+from export_my_agent_status_into_a_file import *
 
 # import utilities of calculate_confidences 
 from calculate_confidences import *
+from calculate_confidences_for_consensus_studying import *
 
+# import utilities of auto logging
+from auto_logging import *
 
 def AskAgentForStatus(HOST, PORT, my_agent_name):
 
@@ -56,6 +60,16 @@ if __name__ == "__main__":
 
     print("does_debug: ", does_debug)
     print("my_program_verbose_level: ", my_program_verbose_level, type(my_program_verbose_level))
+
+    #
+    # step 0 :  prepare the auto logging
+    #
+    my_auto_logging_path = "./log/"
+    my_auto_logging_file_name = "log_test1.log"
+    my_auto_logging = AutoLogging(my_auto_logging_path, my_auto_logging_file_name)
+
+    my_auto_logging.DoLoggingString("My agent start\n")
+    my_auto_logging.DoLoggingString("Current time is : "+time.ctime()+"\n")
 
     #
     # step 1 : get information of all agents
@@ -131,25 +145,38 @@ if __name__ == "__main__":
     #
     print("\n----")
     print("------------")
-    print("step 3 : asking ohter agents for thier current information")
+    print("step 3 : asking other agents for thier current information")
     print("------------")
     print("----")
     for i in range(30):
 
         # step 3.1 : get my agent's previous confidence, which was written in the file, file_name_my_agent_status_file
         my_confidences_to_all_targets = GetMyConfidencesToAllTargets(path_my_agent_status_file, file_name_my_agent_status_file)
-        print('step 3.1 : get my agents previous confidence, which was written in the file, file_name_my_agent_status_file')
-        print('my_confidences_to_all_targets: ',my_confidences_to_all_targets)
+        # logging starts...
+        my_auto_logging.DoLoggingString("\nstep 3.1 : get my agent's previous confidence, which was written in the file, file_name_my_agent_status_file\n")
+        my_auto_logging.DoLoggingDictionary(my_confidences_to_all_targets)
+        # logging ends.
+
+        # debug
+        #print('step 3.1 : get my agents previous confidence, which was written in the file, file_name_my_agent_status_file')
+        #print('my_confidences_to_all_targets: ',my_confidences_to_all_targets)
+        # !debug
 
         # step 3.1.2 : prepare a variable that recoreds the confidences of the neighbour agents 
         neighbour_agents_confidences_to_all_targets = {} # {'target_name': [agent#i_confidence, agent#j_confidence, ...]}
         for my_target_name in my_confidences_to_all_targets:
             neighbour_agents_confidences_to_all_targets[my_target_name] = []
 
-        print('step 3.1.2 : prepare a variable that recoreds the confidences of the neighbour agents')
-        print('neighbour_agents_confidences_to_all_targets', neighbour_agents_confidences_to_all_targets)
+        # debug
+        #print('step 3.1.2 : prepare a variable that recoreds the confidences of the neighbour agents')
+        #print('neighbour_agents_confidences_to_all_targets', neighbour_agents_confidences_to_all_targets)
+        # !debug
 
         # step 3.2 : ask agents in the neighbour set for their information 
+        # logging starts...
+        my_auto_logging.DoLoggingString("\nstep 3.2 : ask agents in the neighbour set for their information\n")
+        # logging ends.
+
         for current_agent_name in dict_all_agent_information:
     
             # step (1) : skip the current agent
@@ -165,6 +192,11 @@ if __name__ == "__main__":
             # !debug
 
             dict_current_agent_status = AskAgentForStatus(current_agent_HOST, current_agent_PORT, my_agent_name)
+
+            # logging starts...
+            my_auto_logging.DoLoggingString("\nstep 3.2, step (2) : get information\n")
+            my_auto_logging.DoLoggingDictionary(dict_current_agent_status)
+            # logging ends.
 
             # debug
             #print("The current status of Agent ",my_agent_name ," has recieved and is shown below.")
@@ -198,11 +230,15 @@ if __name__ == "__main__":
             #current_agent_confidences = dict_current_agent_status['my_confidences_to_all_targets']
             #for element in current_agent_confidences:
             #    print(current_agent_name,', ', element,": ", current_agent_confidences[element])
-
             # !debug
 
+        # logging starts...
+        my_auto_logging.DoLoggingString("\nstep 3.2, step (3) : get confidences and recored them into the variable \"neighbour_agents_confidences_to_all_targets\"\n")
+        my_auto_logging.DoLoggingDictionary(neighbour_agents_confidences_to_all_targets)
+        # logging ends.
+
         # debug
-        print('neighbour_agents_confidences_to_all_targets (after): ', neighbour_agents_confidences_to_all_targets)
+        #print('neighbour_agents_confidences_to_all_targets (after): ', neighbour_agents_confidences_to_all_targets)
         # !debug
 
 
@@ -210,8 +246,42 @@ if __name__ == "__main__":
         # step 3.3.1 : set the path and file name of all_observed_targets_information.json
         path_all_observed_targets_information_file = "./data/"
         file_name_all_observed_targets_information_file = "all_observed_targets_information.json"
-        my_agent = CalculateConfidences(path_my_agent_status_file, file_name_my_agent_status_file, my_confidences_to_all_targets, neighbour_agents_confidences_to_all_targets, path_all_observed_targets_information_file, file_name_all_observed_targets_information_file)
-        my_agent.DoCalculation()
+
+        # step 3.3.2 : calculate the confidences of all target that my agent is intrested in
+        #my_agent = CalculateConfidences(
+        #    path_my_agent_status_file, 
+        #    file_name_my_agent_status_file, 
+        #    neighbour_agents_confidences_to_all_targets, 
+        #    path_all_observed_targets_information_file, 
+        #    file_name_all_observed_targets_information_file)
+        #dict_my_agent_confidences = my_agent.DoCalculation()
+        #print('----dict_my_agent_confidences', dict_my_agent_confidences)
+
+        # test
+        my_agent = CalculateConfidencesForConsensusStudying(
+            path_my_agent_status_file, 
+            file_name_my_agent_status_file, 
+            neighbour_agents_confidences_to_all_targets, 
+            path_all_observed_targets_information_file, 
+            file_name_all_observed_targets_information_file)
+
+        # set my auto logging
+        my_agent.SetMyAutoLogging(my_auto_logging)
+
+        # do calculation
+        dict_my_agent_confidences = my_agent.DoCalculation()
+
+        # step 3.3.3 : save the confidences into the agent status file, named file_name_my_agent_status_file.json
+        # step 3.3.3.1 : change the dictionary of the condidence to fit the file, file_name_my_agent_status_file.json
+        dict_my_agent_confidences_for_exported_file = {}
+        dict_my_agent_confidences_for_exported_file["my_confidences_to_all_targets"] = dict_my_agent_confidences
+        print('::: dict_my_agent_confidences_for_exported_file', dict_my_agent_confidences_for_exported_file)
+
+        # step 3.3.3.2 : export the confidences into the file
+        ExportMyAgentStatusIntoAFile(
+            dict_my_agent_confidences_for_exported_file, 
+            path_my_agent_status_file, 
+            file_name_my_agent_status_file)
 
         # wait until the time interval ends
         time.sleep(my_sampling_time_interval_unit_second)

@@ -1,4 +1,4 @@
-# class : calculate confidences
+# class : calculate_confidence_for_consensus
 import socket
 import json
 import time
@@ -12,7 +12,10 @@ from import_my_agent_status import *
 from import_my_program_verbose_level import *
 from import_all_targets_status import *
 
-class CalculateConfidences:
+# import utilities of auto logging
+from auto_logging import *
+
+class CalculateConfidencesForConsensusStudying:
     def __init__(
         self, 
         path_my_agent_status_file, 
@@ -40,6 +43,10 @@ class CalculateConfidences:
         # set the confidences
         self.dict_my_agent_confidences = {}
 
+        # set my auto logging
+        self.my_auto_logging = 0
+        self.is_my_auto_logging_set = False
+
 
         # debug
         #print("class CalculateConfidences: ")
@@ -63,6 +70,19 @@ class CalculateConfidences:
             # step 2 : store the confidence into the self.dict_my_agent_confidences 
             self.dict_my_agent_confidences[target_name] = my_confidence
 
+            # logging starts...
+            if self.is_my_auto_logging_set:
+                my_logging_line = target_name + ' : ' + str(self.dict_my_agent_confidences[target_name]) + '\n'
+                self.my_auto_logging.DoLoggingString("\nclass CalculateConfidencesForConsensusStudying, , step 1 : get target names, step 2 : store the confidence into the self.dict_my_agent_confidences\n")
+                self.my_auto_logging.DoLoggingString(my_logging_line)
+
+                my_logging_line = 'DoCalculation Ends' + '\n'
+                my_logging_line += '----' + '\n'
+                my_logging_line += '------------' + '\n'
+                my_logging_line += '\n'
+                self.my_auto_logging.DoLoggingString(my_logging_line)
+            # logging ends.
+
         # debug
         #print('----dict_my_agent_confidences', self.dict_my_agent_confidences)
 
@@ -80,19 +100,55 @@ class CalculateConfidences:
         # step 2 : get my previous confidence
         my_previous_confidence = self.my_confidences_to_all_targets[target_name]
 
+        # logging starts...
+        if self.is_my_auto_logging_set:
+            my_logging_line = 'my_previous_confidence : ' + str(my_previous_confidence) + '\n'
+            self.my_auto_logging.DoLoggingString("\nclass CalculateConfidencesForConsensusStudying, DoCalculationAccordingToTarget, target_name: "+target_name+"\n")
+            self.my_auto_logging.DoLoggingString(my_logging_line)
+        # logging ends.
+
         # step 3 : get  confidence of the neighbour agents
         confidences_neighbour_agents = self.neighbour_agents_confidences_to_all_targets[target_name]
 
+        # logging starts...
+        if self.is_my_auto_logging_set:
+
+            my_logging_line = 'confidences_neighbour_agents : '
+            for element in confidences_neighbour_agents: 
+                my_logging_line = my_logging_line + str(element) + ', '
+            my_logging_line += '\n'
+
+            self.my_auto_logging.DoLoggingString("\nclass CalculateConfidencesForConsensusStudying, DoCalculationAccordingToTarget, step 3 : get  confidence of the neighbour agents\n")
+            self.my_auto_logging.DoLoggingString(my_logging_line)
+        # logging ends.
+
         # step 4 : do calculate
         for current_neighbour_agent_confidence in confidences_neighbour_agents:
-            u = u + self.epsilon * (my_previous_confidence - current_neighbour_agent_confidence)
+            u = u + self.epsilon * (current_neighbour_agent_confidence - my_previous_confidence)
+
+        # logging starts...
+        if self.is_my_auto_logging_set:
+            my_logging_line = 'u : ' + str(u) + '\n'
+            self.my_auto_logging.DoLoggingString("\nclass CalculateConfidencesForConsensusStudying, DoCalculationAccordingToTarget, step 4 : do calculate\n")
+            self.my_auto_logging.DoLoggingString(my_logging_line)
+        # logging ends.
 
         # step 5 : calculate the implicit confidence of my agent
-        implicit_confidence = self.CalculateMyImplicitConfidence(target_name)
+        #implicit_confidence = self.CalculateMyImplicitConfidence(target_name)
 
 
         # step 6 : calculate the confidence
-        my_confidence = my_previous_confidence + u + self.epsilon*(implicit_confidence - my_previous_confidence)
+        #my_confidence = my_previous_confidence + u + self.epsilon*(implicit_confidence - my_previous_confidence)
+        my_confidence = my_previous_confidence + u
+
+        # logging starts...
+        if self.is_my_auto_logging_set:
+            my_logging_line = 'my_confidence(' + str(my_confidence) + ')'
+            my_logging_line = my_logging_line + ' = my_previous_confidence(' + str(my_previous_confidence) + ')'
+            my_logging_line = my_logging_line + ' + u(' + str(u) + ')'
+            self.my_auto_logging.DoLoggingString("\nclass CalculateConfidencesForConsensusStudying, DoCalculationAccordingToTarget, step 6 : calculate the confidence\n")
+            self.my_auto_logging.DoLoggingString(my_logging_line)
+        # logging ends.
 
         return my_confidence
 
@@ -139,6 +195,11 @@ class CalculateConfidences:
 
 
     def GetMyConfidences(self):
+        return
+
+    def SetMyAutoLogging(self, my_auto_logging):
+        self.my_auto_logging = my_auto_logging
+        self.is_my_auto_logging_set = True
         return
 
 

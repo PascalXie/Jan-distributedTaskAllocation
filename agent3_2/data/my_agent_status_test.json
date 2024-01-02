@@ -1,0 +1,13 @@
+{
+    "my_agent_name": "Agent#3_2",
+    "my_confidences_to_all_targets": {
+        "confidence_to_target#2": 0.2,
+        "confidence_to_target#1": 0.8
+    },
+    "my_agent_location": {
+        "z": 30,
+        "x": 10,
+        "y": 20
+    },
+    "my_sampling_time_interval_unit_second": 0.1
+}
